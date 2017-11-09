@@ -8,11 +8,24 @@
 #define NOT_FOUND NULL
 #define FIRST_FILE 2
 #define LINE_WITH_SEARCHWORD "%s", line
-#define FILE_NAME_LINE_WITH_SEARCHWORD "%s: %s", argv[i + FIRST_FILE], line
+#define FILE_NAME_LINE_WITH_SEARCHWORD "%s:%s", argv[i + FIRST_FILE], line
 #define NO_FILES 0
 #define NO_INPUT 1
 #define FAILED -1
-
+#define OFFSET 2
+#define WORD 1
+#define SUCCESS 0
+#define FILE_NOT_FOUND stderr, "grep: %s: No such file or directory\n", argv[i + FIRST_FILE]
+/**
+ * Enum:  Boolean 
+ * --------------------
+ * for simplify use in boolean as in other languages
+ **/
+typedef enum BOOLEAN
+{
+    FALSE = 0,
+    TRUE = 1
+} bool;
 
 /**
  * Function:  checkStringInFiles 
@@ -25,10 +38,10 @@
 
  *  returns: void.
  **/
-void checkStringInFiles(int numberOfFiles, char* searchWord, char* argv[])
+int checkStringInFiles(int numberOfFiles, char * searchWord, char* argv[])
 {
     char line[SIZE_OF_LINE]; // change that to line size
-
+    bool failed = FALSE;
 
     // for every file that the user is demand to search
     // search for the searchWord in every line in every file
@@ -37,12 +50,19 @@ void checkStringInFiles(int numberOfFiles, char* searchWord, char* argv[])
         // file pointer at the i=0,..,n'th file
         FILE* file = fopen(argv[i + FIRST_FILE], READ);
 
+        if (file == NULL) 
+        {
+            fprintf(FILE_NOT_FOUND);
+            failed = TRUE;
+            continue;
+        }
 
         while (fgets(line, sizeof(line), file)) 
         {
             char c;
             int j = 0;
-            char* str = line;
+            char str [SIZE_OF_LINE];
+            strcpy(str, line);
 
             // for non-caseSensetive - every char to lower case 
             while (str[j])
@@ -80,6 +100,12 @@ void checkStringInFiles(int numberOfFiles, char* searchWord, char* argv[])
 
     }
 
+    if (failed == TRUE)
+    {
+        return FAILED;
+    }
+
+    return SUCCESS;
 }
 
 
@@ -95,8 +121,8 @@ void checkStringInFiles(int numberOfFiles, char* searchWord, char* argv[])
  **/
 int main(int argc, char* argv[])
 {
-    int numberOfFiles = argc - 2;
-    char* searchWord = argv[1]; 
+    int numberOfFiles = argc - OFFSET;
+    char* searchWord = argv[WORD]; 
 
     // if there are no file insert return -1
     // if argc is no bigger than 1 than there is no inputs
@@ -106,8 +132,14 @@ int main(int argc, char* argv[])
     }
 
     // find the string in the files
-    checkStringInFiles(numberOfFiles, searchWord, argv);
+    int stat = checkStringInFiles(numberOfFiles, searchWord, argv);
 
+    if (stat == FAILED)
+    {
+        return FAILED;
+    }
+
+    return SUCCESS;
 } 
 
 

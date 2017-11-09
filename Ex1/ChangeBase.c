@@ -2,28 +2,29 @@
 (a) the algorithm i used based on double converting
     (originalNumber)_base -> (originalNumber)_10 -> (originalNumber)_newBase
 (b) complexity of my algorithm is: 
-        number to decimal - O(n) when n is the number of digits
-        decimal to newBase - O(Log_base(k))) number of itaration is
-                                        log of k - is the number in decemal
-                                        we know k <= n
+        number to decimal - O(log(n)) when n is the input number (2^(number of digits) = n)
+        decimal to newBase - O(log(n))) 
 
-        therefore => O(n) + O(Log_base(n))) ==> O(n)
+        therefore => O(log(n))
 **/
 #include <stdio.h>
 #include <math.h>
 
+#define MAX_BASE 10
+#define MIN_BASE 2
 #define SIZE_OF_LINE 13
-#define MAX 32
+#define MAX_DIGITS 32
 #define ZERO_CONVERT 0
 #define ZERO_CASE "0\n"
 #define NUMBER__AT_NEW_BASE "%c", digits[i-j-1] + '0'
-#define ENTER "\n"
+#define NEW_LINE "\n"
 #define DECEMAL_BASE 10
 #define INVALID "invalid!!\n"
 #define FAILED -1
 #define DECEMAL_NUMBER "%d\n", decemal
 #define USAGE_INPUT "%hu %hu %d"
 #define USAGE "Usage: <original base> <new base> <number in original base> \n"
+#define SUCCESS 0
 
 /**
  * Function:  decimalToBase 
@@ -37,8 +38,7 @@
  **/
 void decimalToBase(unsigned int decemal, unsigned short newBase)
 {
-
-    char digits[MAX];
+    char digits[MAX_DIGITS];
 
     // 0 is 0 in every base
     if (decemal == ZERO_CONVERT)
@@ -68,7 +68,7 @@ void decimalToBase(unsigned int decemal, unsigned short newBase)
         // print from END TO START [defualt representation]
         printf(NUMBER__AT_NEW_BASE);
     }
-    printf(ENTER);
+    printf(NEW_LINE);
     return;
 }
 
@@ -104,26 +104,27 @@ int convertToDecemal(unsigned int numberInOriginalBase,
         // check invalid base case
         if (!(currentBit < originalBase))
         {
-            printf(INVALID);
+            fprintf(stderr, INVALID);
+            fflush(stderr);
             return FAILED;
         }
 
         decemal += currentBit * (int)pow(originalBase, i++);
 
         numberInOriginalBase /= DECEMAL_BASE;
-        //i++;
     }
 
     return decemal;
 }
 
 /**
- * Function:  convertToDecemal 
+ * Function:  main
  * --------------------
- * convert number @ some base to number @ new base
+ * the main call the two main functions 
+ * to convert to decemal and then convert to new base
  *
  *
- *  returns: FAILED: -1 SUCCESSES: other than -1
+ *  returns: FAILED: -1 SUCCESSES: 0
  **/
 int main()
 {
@@ -131,9 +132,7 @@ int main()
     unsigned short originalBase;        // originalBase - unsigned shot - holds numbers between 2-10
     unsigned short newBase;             // newBase - unsigned short - holds numbers between 2-10
     unsigned int numberInOriginalBase;  // numberInOriginalBase - unsigned int - max 6 digits
-
-    printf(USAGE);
-    
+        
     // read input from the user onlt the size of line[13] - so we wont get overflow
     if (fgets(line, sizeof(line), stdin))
     {
@@ -141,6 +140,16 @@ int main()
         // sccanf is saftly used because it read only from the fgets buffer
         if (sscanf(line, USAGE_INPUT, &originalBase, &newBase, &numberInOriginalBase))
         {
+
+            // check bases between 2-10
+            if (originalBase > MAX_BASE || originalBase < MIN_BASE || 
+                newBase > MAX_BASE || newBase < MIN_BASE)
+            {
+                fprintf(stderr, INVALID);
+                fflush(stderr);
+                return FAILED;
+            }
+
             int decemal = convertToDecemal(numberInOriginalBase, originalBase);
             
             // failed case
@@ -154,7 +163,7 @@ int main()
 
         }
 
-
     } 
 
+    return SUCCESS;
 }

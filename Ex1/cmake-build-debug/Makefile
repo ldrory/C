@@ -123,32 +123,59 @@ Ex1/fast:
 	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/build
 .PHONY : Ex1/fast
 
-library.o: library.c.o
+ChangeBase.o: ChangeBase.c.o
 
-.PHONY : library.o
+.PHONY : ChangeBase.o
 
 # target to build an object file
-library.c.o:
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/library.c.o
-.PHONY : library.c.o
+ChangeBase.c.o:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/ChangeBase.c.o
+.PHONY : ChangeBase.c.o
 
-library.i: library.c.i
+ChangeBase.i: ChangeBase.c.i
 
-.PHONY : library.i
+.PHONY : ChangeBase.i
 
 # target to preprocess a source file
-library.c.i:
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/library.c.i
-.PHONY : library.c.i
+ChangeBase.c.i:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/ChangeBase.c.i
+.PHONY : ChangeBase.c.i
 
-library.s: library.c.s
+ChangeBase.s: ChangeBase.c.s
 
-.PHONY : library.s
+.PHONY : ChangeBase.s
 
 # target to generate assembly for a file
-library.c.s:
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/library.c.s
-.PHONY : library.c.s
+ChangeBase.c.s:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/ChangeBase.c.s
+.PHONY : ChangeBase.c.s
+
+FindString.o: FindString.c.o
+
+.PHONY : FindString.o
+
+# target to build an object file
+FindString.c.o:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/FindString.c.o
+.PHONY : FindString.c.o
+
+FindString.i: FindString.c.i
+
+.PHONY : FindString.i
+
+# target to preprocess a source file
+FindString.c.i:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/FindString.c.i
+.PHONY : FindString.c.i
+
+FindString.s: FindString.c.s
+
+.PHONY : FindString.s
+
+# target to generate assembly for a file
+FindString.c.s:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/FindString.c.s
+.PHONY : FindString.c.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Ex1"
-	@echo "... library.o"
-	@echo "... library.i"
-	@echo "... library.s"
+	@echo "... ChangeBase.o"
+	@echo "... ChangeBase.i"
+	@echo "... ChangeBase.s"
+	@echo "... FindString.o"
+	@echo "... FindString.i"
+	@echo "... FindString.s"
 .PHONY : help
 
 

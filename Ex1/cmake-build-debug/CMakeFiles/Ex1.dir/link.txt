@@ -1,2 +1,2 @@
-/usr/bin/ar.exe qc libEx1.a  CMakeFiles/Ex1.dir/library.c.o
+/usr/bin/ar.exe qc libEx1.a  CMakeFiles/Ex1.dir/ChangeBase.c.o CMakeFiles/Ex1.dir/FindString.c.o
 /usr/bin/ranlib.exe libEx1.a

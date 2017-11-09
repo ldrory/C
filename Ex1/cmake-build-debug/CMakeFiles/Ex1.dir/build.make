@@ -57,41 +57,67 @@ include CMakeFiles/Ex1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Ex1.dir/flags.make
 
-CMakeFiles/Ex1.dir/library.c.o: CMakeFiles/Ex1.dir/flags.make
-CMakeFiles/Ex1.dir/library.c.o: ../library.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex1.dir/library.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex1.dir/library.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/library.c
+CMakeFiles/Ex1.dir/ChangeBase.c.o: CMakeFiles/Ex1.dir/flags.make
+CMakeFiles/Ex1.dir/ChangeBase.c.o: ../ChangeBase.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex1.dir/ChangeBase.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex1.dir/ChangeBase.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/ChangeBase.c
 
-CMakeFiles/Ex1.dir/library.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex1.dir/library.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/library.c > CMakeFiles/Ex1.dir/library.c.i
+CMakeFiles/Ex1.dir/ChangeBase.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex1.dir/ChangeBase.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/ChangeBase.c > CMakeFiles/Ex1.dir/ChangeBase.c.i
 
-CMakeFiles/Ex1.dir/library.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex1.dir/library.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/library.c -o CMakeFiles/Ex1.dir/library.c.s
+CMakeFiles/Ex1.dir/ChangeBase.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex1.dir/ChangeBase.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/ChangeBase.c -o CMakeFiles/Ex1.dir/ChangeBase.c.s
 
-CMakeFiles/Ex1.dir/library.c.o.requires:
+CMakeFiles/Ex1.dir/ChangeBase.c.o.requires:
 
-.PHONY : CMakeFiles/Ex1.dir/library.c.o.requires
+.PHONY : CMakeFiles/Ex1.dir/ChangeBase.c.o.requires
 
-CMakeFiles/Ex1.dir/library.c.o.provides: CMakeFiles/Ex1.dir/library.c.o.requires
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/library.c.o.provides.build
-.PHONY : CMakeFiles/Ex1.dir/library.c.o.provides
+CMakeFiles/Ex1.dir/ChangeBase.c.o.provides: CMakeFiles/Ex1.dir/ChangeBase.c.o.requires
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/ChangeBase.c.o.provides.build
+.PHONY : CMakeFiles/Ex1.dir/ChangeBase.c.o.provides
 
-CMakeFiles/Ex1.dir/library.c.o.provides.build: CMakeFiles/Ex1.dir/library.c.o
+CMakeFiles/Ex1.dir/ChangeBase.c.o.provides.build: CMakeFiles/Ex1.dir/ChangeBase.c.o
+
+
+CMakeFiles/Ex1.dir/FindString.c.o: CMakeFiles/Ex1.dir/flags.make
+CMakeFiles/Ex1.dir/FindString.c.o: ../FindString.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Ex1.dir/FindString.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex1.dir/FindString.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/FindString.c
+
+CMakeFiles/Ex1.dir/FindString.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex1.dir/FindString.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/FindString.c > CMakeFiles/Ex1.dir/FindString.c.i
+
+CMakeFiles/Ex1.dir/FindString.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex1.dir/FindString.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/FindString.c -o CMakeFiles/Ex1.dir/FindString.c.s
+
+CMakeFiles/Ex1.dir/FindString.c.o.requires:
+
+.PHONY : CMakeFiles/Ex1.dir/FindString.c.o.requires
+
+CMakeFiles/Ex1.dir/FindString.c.o.provides: CMakeFiles/Ex1.dir/FindString.c.o.requires
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/FindString.c.o.provides.build
+.PHONY : CMakeFiles/Ex1.dir/FindString.c.o.provides
+
+CMakeFiles/Ex1.dir/FindString.c.o.provides.build: CMakeFiles/Ex1.dir/FindString.c.o
 
 
 # Object files for target Ex1
 Ex1_OBJECTS = \
-"CMakeFiles/Ex1.dir/library.c.o"
+"CMakeFiles/Ex1.dir/ChangeBase.c.o" \
+"CMakeFiles/Ex1.dir/FindString.c.o"
 
 # External object files for target Ex1
 Ex1_EXTERNAL_OBJECTS =
 
-libEx1.a: CMakeFiles/Ex1.dir/library.c.o
+libEx1.a: CMakeFiles/Ex1.dir/ChangeBase.c.o
+libEx1.a: CMakeFiles/Ex1.dir/FindString.c.o
 libEx1.a: CMakeFiles/Ex1.dir/build.make
 libEx1.a: CMakeFiles/Ex1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libEx1.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libEx1.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/Ex1.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ex1.dir/link.txt --verbose=$(VERBOSE)
 
@@ -100,7 +126,8 @@ CMakeFiles/Ex1.dir/build: libEx1.a
 
 .PHONY : CMakeFiles/Ex1.dir/build
 
-CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/library.c.o.requires
+CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/ChangeBase.c.o.requires
+CMakeFiles/Ex1.dir/requires: CMakeFiles/Ex1.dir/FindString.c.o.requires
 
 .PHONY : CMakeFiles/Ex1.dir/requires
 

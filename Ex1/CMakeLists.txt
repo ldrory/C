@@ -3,5 +3,5 @@ project(Ex1)
 
 set(CMAKE_C_STANDARD 99)
 
-set(SOURCE_FILES library.c library.h)
+set(SOURCE_FILES ChangeBase.c FindString.c)
 add_library(Ex1 ${SOURCE_FILES})

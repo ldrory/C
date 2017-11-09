@@ -80,10 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/library.c">
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/ChangeBase.c">
 			<Option target="Ex1"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/library.h">
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/FindString.c">
 			<Option target="Ex1"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex1/CMakeLists.txt">
