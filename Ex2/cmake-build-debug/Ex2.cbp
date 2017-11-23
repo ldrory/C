@@ -92,10 +92,7 @@
 		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/.idea/workspace.xml">
 			<Option target="Ex2"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/MyString.c">
-			<Option target="Ex2"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/MyString.h">
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/BuggyLinkedList.c">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/CMakeLists.txt">

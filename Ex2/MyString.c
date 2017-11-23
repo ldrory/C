@@ -40,7 +40,7 @@ MyStringP createStringFromChars(const char* str1)
     CHECKS_NULL(str1);
 
     // get memory for the struct we build
-    MyStringP stringStruct = malloc(sizeof(struct MyString));
+    MyStringP stringStruct = (MyStringP)malloc(sizeof(struct MyString));
     CHECKS_ALLOCATE(stringStruct);
 
     // initalized length 0 and increase it in the while loop
@@ -50,9 +50,10 @@ MyStringP createStringFromChars(const char* str1)
 
     // set information to struct
     stringStruct->length = length;
-    stringStruct->string = malloc(sizeof(char)*length);
+    stringStruct->string = (char*)malloc(sizeof(char)*length);
     CHECKS_ALLOCATE(stringStruct->string);
 
+    // copy char by char to string in struct
     for(int i=0;i<length;++i)
     {
         *(stringStruct->string + i) = *str1++;
@@ -74,10 +75,10 @@ MyStringP createStringFromString(const MyStringP str1)
     size length = str1->length;
 
     // allocate memory for the struct and string pointer
-    MyStringP stringStruct = malloc(sizeof(struct MyString));
+    MyStringP stringStruct = (MyStringP) malloc(sizeof(struct MyString));
     CHECKS_ALLOCATE(stringStruct);
 
-    stringStruct->string = malloc(sizeof(char)*length);
+    stringStruct->string = (char*) malloc(sizeof(char)*length);
     CHECKS_ALLOCATE(stringStruct->string);
 
     stringStruct->length = length;
@@ -197,7 +198,7 @@ MyStringP concatString(MyStringP str1,const MyStringP str2)
     size lengthStr1 = str1->length;
     size lengthStr2 = str2->length;
 
-    str1->string = realloc(str1->string, sizeof(char)*lengthStr1 + sizeof(char)*lengthStr2);
+    str1->string = (char*)realloc(str1->string, sizeof(char)*lengthStr1 + sizeof(char)*lengthStr2);
     CHECKS_ALLOCATE(str1->string);
 
     // get to the end of str1
@@ -224,7 +225,7 @@ MyStringP deleteCharString(MyStringP str1,const char letter)
     CHECKS_NULL(str1);
     CHECKS_NULL(letter);
 
-    char* lackString = malloc(sizeof(char) * (str1->length - 1));
+    char* lackString = (char*)malloc(sizeof(char) * (str1->length - 1));
     CHECKS_ALLOCATE(lackString);
 
     // pass all text and when letter is shown, skip it

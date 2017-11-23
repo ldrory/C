@@ -123,32 +123,32 @@ Ex2/fast:
 	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/build
 .PHONY : Ex2/fast
 
-MyString.o: MyString.c.o
+BuggyLinkedList.o: BuggyLinkedList.c.o
 
-.PHONY : MyString.o
+.PHONY : BuggyLinkedList.o
 
 # target to build an object file
-MyString.c.o:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/MyString.c.o
-.PHONY : MyString.c.o
+BuggyLinkedList.c.o:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/BuggyLinkedList.c.o
+.PHONY : BuggyLinkedList.c.o
 
-MyString.i: MyString.c.i
+BuggyLinkedList.i: BuggyLinkedList.c.i
 
-.PHONY : MyString.i
+.PHONY : BuggyLinkedList.i
 
 # target to preprocess a source file
-MyString.c.i:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/MyString.c.i
-.PHONY : MyString.c.i
+BuggyLinkedList.c.i:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/BuggyLinkedList.c.i
+.PHONY : BuggyLinkedList.c.i
 
-MyString.s: MyString.c.s
+BuggyLinkedList.s: BuggyLinkedList.c.s
 
-.PHONY : MyString.s
+.PHONY : BuggyLinkedList.s
 
 # target to generate assembly for a file
-MyString.c.s:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/MyString.c.s
-.PHONY : MyString.c.s
+BuggyLinkedList.c.s:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/BuggyLinkedList.c.s
+.PHONY : BuggyLinkedList.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Ex2"
-	@echo "... MyString.o"
-	@echo "... MyString.i"
-	@echo "... MyString.s"
+	@echo "... BuggyLinkedList.o"
+	@echo "... BuggyLinkedList.i"
+	@echo "... BuggyLinkedList.s"
 .PHONY : help
 
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/MyString.c
+/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/BuggyLinkedList.c
 stdio.h
 -
 stdlib.h

@@ -57,38 +57,38 @@ include CMakeFiles/Ex2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Ex2.dir/flags.make
 
-CMakeFiles/Ex2.dir/MyString.c.o: CMakeFiles/Ex2.dir/flags.make
-CMakeFiles/Ex2.dir/MyString.c.o: ../MyString.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex2.dir/MyString.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex2.dir/MyString.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/MyString.c
+CMakeFiles/Ex2.dir/BuggyLinkedList.c.o: CMakeFiles/Ex2.dir/flags.make
+CMakeFiles/Ex2.dir/BuggyLinkedList.c.o: ../BuggyLinkedList.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex2.dir/BuggyLinkedList.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex2.dir/BuggyLinkedList.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/BuggyLinkedList.c
 
-CMakeFiles/Ex2.dir/MyString.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex2.dir/MyString.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/MyString.c > CMakeFiles/Ex2.dir/MyString.c.i
+CMakeFiles/Ex2.dir/BuggyLinkedList.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex2.dir/BuggyLinkedList.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/BuggyLinkedList.c > CMakeFiles/Ex2.dir/BuggyLinkedList.c.i
 
-CMakeFiles/Ex2.dir/MyString.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex2.dir/MyString.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/MyString.c -o CMakeFiles/Ex2.dir/MyString.c.s
+CMakeFiles/Ex2.dir/BuggyLinkedList.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex2.dir/BuggyLinkedList.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/BuggyLinkedList.c -o CMakeFiles/Ex2.dir/BuggyLinkedList.c.s
 
-CMakeFiles/Ex2.dir/MyString.c.o.requires:
+CMakeFiles/Ex2.dir/BuggyLinkedList.c.o.requires:
 
-.PHONY : CMakeFiles/Ex2.dir/MyString.c.o.requires
+.PHONY : CMakeFiles/Ex2.dir/BuggyLinkedList.c.o.requires
 
-CMakeFiles/Ex2.dir/MyString.c.o.provides: CMakeFiles/Ex2.dir/MyString.c.o.requires
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/MyString.c.o.provides.build
-.PHONY : CMakeFiles/Ex2.dir/MyString.c.o.provides
+CMakeFiles/Ex2.dir/BuggyLinkedList.c.o.provides: CMakeFiles/Ex2.dir/BuggyLinkedList.c.o.requires
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/BuggyLinkedList.c.o.provides.build
+.PHONY : CMakeFiles/Ex2.dir/BuggyLinkedList.c.o.provides
 
-CMakeFiles/Ex2.dir/MyString.c.o.provides.build: CMakeFiles/Ex2.dir/MyString.c.o
+CMakeFiles/Ex2.dir/BuggyLinkedList.c.o.provides.build: CMakeFiles/Ex2.dir/BuggyLinkedList.c.o
 
 
 # Object files for target Ex2
 Ex2_OBJECTS = \
-"CMakeFiles/Ex2.dir/MyString.c.o"
+"CMakeFiles/Ex2.dir/BuggyLinkedList.c.o"
 
 # External object files for target Ex2
 Ex2_EXTERNAL_OBJECTS =
 
-Ex2.exe: CMakeFiles/Ex2.dir/MyString.c.o
+Ex2.exe: CMakeFiles/Ex2.dir/BuggyLinkedList.c.o
 Ex2.exe: CMakeFiles/Ex2.dir/build.make
 Ex2.exe: CMakeFiles/Ex2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Ex2.exe"
@@ -99,7 +99,7 @@ CMakeFiles/Ex2.dir/build: Ex2.exe
 
 .PHONY : CMakeFiles/Ex2.dir/build
 
-CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/MyString.c.o.requires
+CMakeFiles/Ex2.dir/requires: CMakeFiles/Ex2.dir/BuggyLinkedList.c.o.requires
 
 .PHONY : CMakeFiles/Ex2.dir/requires
 

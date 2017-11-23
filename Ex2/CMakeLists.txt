@@ -8,7 +8,7 @@ set(SOURCE_FILES
         .idea/misc.xml
         .idea/modules.xml
         .idea/workspace.xml
-        MyString.c
-        MyString.h)
+        BuggyLinkedList.c
+        )
 
 add_executable(Ex2 ${SOURCE_FILES})

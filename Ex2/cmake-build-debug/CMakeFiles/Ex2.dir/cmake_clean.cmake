@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ex2.dir/MyString.c.o"
+  "CMakeFiles/Ex2.dir/BuggyLinkedList.c.o"
   "Ex2.pdb"
   "Ex2.exe"
   "libEx2.dll.a"
