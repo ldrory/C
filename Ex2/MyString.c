@@ -2,10 +2,20 @@
 #include <stdlib.h>
 
 #define CHECKS_NULL(pointer) do{ if (pointer == NULL) \
-    {fprintf(stderr, "Error: NULL pointer input\n"); return NULL;} } while(0)
+    { fprintf(stderr, "Error: NULL pointer input\n"); return NULL; } } while(0)
 
 #define CHECKS_ALLOCATE(pointer) do{ if (pointer == NULL) \
-    {fprintf(stderr, "Error: Can't allocate memory\n"); return NULL;} } while(0)
+    {fprintf(stderr, "Error: Can't allocate memory\n"); return NULL; } } while(0)
+
+#define NULL_TERMI '\0'
+#define CALIB 1
+#define NULL_ERROR "Can't freeString with a NULL pointer\n"
+#define ERROR_M -1
+#define _ERROR_ -2
+#define ERROR_ZERO 0
+#define EQUAL 0
+#define STR1 1
+#define STR2 -1
 
 
 /**
@@ -45,16 +55,16 @@ MyStringP createStringFromChars(const char* str1)
 
     // initalized length 0 and increase it in the while loop
     size length = 0;
-    while(*(str1 + length++) != '\0');
+    while(*(str1 + length++) != NULL_TERMI);
     length--;
 
     // set information to struct
     stringStruct->length = length;
-    stringStruct->string = (char*)malloc(sizeof(char)*length);
+    stringStruct->string = (char*)malloc(sizeof(char)*(length + CALIB));
     CHECKS_ALLOCATE(stringStruct->string);
 
     // copy char by char to string in struct
-    for(int i=0;i<length;++i)
+    for(size i = 0; i<length; ++i)
     {
         *(stringStruct->string + i) = *str1++;
     }
@@ -84,7 +94,7 @@ MyStringP createStringFromString(const MyStringP str1)
     stringStruct->length = length;
 
     // copy by value
-    for(int i=0; i<length; ++i)
+    for(size i = 0; i<length; ++i)
     {
         *(stringStruct->string + i) = *(str1->string + i);
     }
@@ -100,12 +110,16 @@ void freeString(MyStringP str1)
 {
     if (str1 == NULL)
     {
-        fprintf(stderr, "Can't freeString with a NULL pointer\n");
+        fprintf(stderr, NULL_ERROR);
         return;
     }
-
+    // free the string pointer
     free(str1->string);
     str1->string = NULL;
+
+    // free the struct pointer
+    free(str1);
+    str1 = NULL;
 }
 
 /**
@@ -117,8 +131,8 @@ size lengthString(const MyStringP str1)
 {
     if (str1 == NULL)
     {
-        fprintf(stderr, "Can't length with a NULL pointer\n");
-        return -1; // return MAX int (-1) in unsigend
+        fprintf(stderr, NULL_ERROR);
+        return ERROR_M; // return MAX int (-1) in unsigend
                    // for representing an error
     }
 
@@ -147,12 +161,12 @@ const char* cString(const MyStringP str1)
  * 0 if both strings are identical (equal)
  * -1 if the ASCII value of first unmatched character is less in str1 then str2.
  */
-int cmpString(const MyStringP str1,const MyStringP str2)
+int cmpString(const MyStringP str1, const MyStringP str2)
 {
     if (str1 == NULL || str2 == NULL)
     {
-        fprintf(stderr, "Can't cmpString with a NULL pointer\n");
-        return 2;
+        fprintf(stderr, NULL_ERROR);
+        return _ERROR_;
     }
 
     // get the shorter size
@@ -161,16 +175,16 @@ int cmpString(const MyStringP str1,const MyStringP str2)
 
     size length = lengthStr1 > lengthStr2 ? lengthStr2 : lengthStr1;
 
-    for(int i=0; i<length; ++i)
+    for(size i = 0; i<length; ++i)
     {
         // get the difference between each char
         int diff = *(str1->string + i) - *(str2->string + i);
-
         // if diff>0 gets 1, diff<0 gets -1, equal gets 0
-        int sign = diff > 0 ? 1 : diff < 0 ? -1 : 0;
+        int sign = diff > 0 ? STR1 : diff < 0 ? STR2 : EQUAL;
 
-        switch (sign) {
-            case 0:
+        switch (sign) 
+        {
+            case EQUAL:
                 continue;
             default:
                 return sign;
@@ -178,8 +192,8 @@ int cmpString(const MyStringP str1,const MyStringP str2)
     }
 
     // all char are equal, now return value by the length
-    // lenStr1 == lenStr2 return 0, lenStr1 < lenStr2 return 1, lenStr1 > lenStr2 return -1.
-    return lengthStr1 == lengthStr2 ? 0 : lengthStr1<lengthStr2 ? 1 : -1;
+    // lenStr1 == lenStr2 return 0, lenStr1 < lenStr2 return -1, lenStr1 > lenStr2 return 1.
+    return lengthStr1 == lengthStr2 ? EQUAL : lengthStr1<lengthStr2 ? STR2 : STR1;
 
 }
 
@@ -189,7 +203,7 @@ int cmpString(const MyStringP str1,const MyStringP str2)
  * @param str2 the second string in the result
  * @return the result of the concatenate
  */
-MyStringP concatString(MyStringP str1,const MyStringP str2)
+MyStringP concatString(MyStringP str1, const MyStringP str2)
 {
     CHECKS_NULL(str1);
     CHECKS_NULL(str2);
@@ -197,14 +211,16 @@ MyStringP concatString(MyStringP str1,const MyStringP str2)
     // get the shorter size
     size lengthStr1 = str1->length;
     size lengthStr2 = str2->length;
+    size resLen =  lengthStr1 + lengthStr2 + CALIB;
 
-    str1->string = (char*)realloc(str1->string, sizeof(char)*lengthStr1 + sizeof(char)*lengthStr2);
+    str1->string = realloc(str1->string, (size) resLen);
     CHECKS_ALLOCATE(str1->string);
 
     // get to the end of str1
     char* endOfStr1 = (str1->string + lengthStr1);
 
-    for (int i = 0; i < lengthStr2; ++i)
+    size i;
+    for ( i = 0; i < lengthStr2; ++i)
     {
         *(endOfStr1 + i) = *(str2->string + i);
     }
@@ -220,20 +236,22 @@ MyStringP concatString(MyStringP str1,const MyStringP str2)
  * @param letter the letter to delete from the String
  * @return the result.
  */
-MyStringP deleteCharString(MyStringP str1,const char letter)
+MyStringP deleteCharString(MyStringP str1, const char letter)
 {
     CHECKS_NULL(str1);
-    CHECKS_NULL(letter);
 
-    char* lackString = (char*)malloc(sizeof(char) * (str1->length - 1));
+    char* lackString = (char*)calloc(sizeof(char), (str1->length + CALIB));
     CHECKS_ALLOCATE(lackString);
 
     // pass all text and when letter is shown, skip it
-    int j =0;
-    for(int i=0; i<str1->length; ++i)
+    size j = 0;
+    size del = 0;
+    size i;
+    for(i = 0; i<str1->length; ++i)
     {
         if(*(str1->string + i) == letter)
         {
+            del++;
             continue;
         }
         else
@@ -245,6 +263,7 @@ MyStringP deleteCharString(MyStringP str1,const char letter)
 
     free(str1->string);
     str1->string = lackString;
+    str1->length = str1->length - del;
     return str1;
 }
 
@@ -258,15 +277,18 @@ MyStringP deleteCharString(MyStringP str1,const char letter)
  */
 size countSubStr(const MyStringP str1, const MyStringP str2, int isCyclic)
 {
-    CHECKS_NULL(str1);
-    CHECKS_NULL(str2);
+    if (str1 == NULL || str2 == NULL)
+    {
+        fprintf(stderr, NULL_ERROR);
+        return ERROR_ZERO;
+    }
 
     // get the shorter size
     size lengthStr1 = str1->length;
     size lengthStr2 = str2->length;
 
     // corner case
-    if (lengthStr1 == 0 || lengthStr2 == 0 || lengthStr1 < lengthStr2)
+    if (lengthStr1 == 0 || lengthStr2 == 0)
     {
         return 0;
     }
@@ -276,24 +298,25 @@ size countSubStr(const MyStringP str1, const MyStringP str2, int isCyclic)
     char* str2String = str2->string;
 
     // find matches
-    for (int i=0; i<lengthStr1; ++i)
+    size i;
+    for (i = 0; i<lengthStr1; ++i)
     {
 
         // if first char matches
         if (*str2String == *(str1->string + i))
         {
-            int j;
+            size j;
             for (j = 0; j < lengthStr2; ++j)
             {
                 // if it is end of the str1 and cyclic isn't on
                 // break
-                if (i+j == lengthStr1 && isCyclic == 0)
+                if (i + j == lengthStr1 && isCyclic == 0)
                 {
                     break;
                 }
 
                 // if the jth char matches
-                if (*(str2String + j) != *(str1->string + ((i+j) % lengthStr1) ))
+                if (*(str2String + j) != *(str1->string + ((i + j) % lengthStr1) ))
                 {
                     break;
                 }
@@ -312,31 +335,3 @@ size countSubStr(const MyStringP str1, const MyStringP str2, int isCyclic)
 
     return count;
 }
-
-
-//int main()
-//{
-//    char *word = "abababab";
-//    MyStringP str1 = createStringFromChars(word);
-//    printf("%s\n", str1->string);
-//    printf("%d\n", str1->length);
-//
-//    char *word2 = "baba";
-//    MyStringP str2 = createStringFromChars(word2);
-//    printf("%s\n", str2->string);
-//    printf("%d\n", str2->length);
-//
-//    printf("%d\n", cmpString(str1,str2));
-//
-//    MyStringP concat = concatString(x,y);
-//
-//    printf("%s\n", concat->string);
-//    printf("%lu\n", concat->length);
-
-//    MyStringP p = deleteCharString(y,'L');
-//    printf("%s\n", p->string);
-//    printf("%lu\n", p->length);
-
-//    printf("\ncounts: %d\n", countSubStr(str1, str2, -3));
-
-//}
