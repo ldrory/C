@@ -44,10 +44,11 @@ int main(int argc, char *argv[])
         data[j][4] = '\0';
         insert_object_j = insert(table, data[j], data[j]);
         if (insert_object_j == false) 
-	{
+	    {
             printf("ERROR: failed to insert object %d key %s data %s to the table!\n", j, data[j], data[j]);
             return 0;     
         }
+
     }
 
     // (4) print the table

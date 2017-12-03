@@ -46,7 +46,6 @@ int main(int argc, char *argv[])
     {
         data[i] = malloc(sizeof(int));
         *data[i] = i+MINIMAL_VAL;
-        fprintf(stderr, "insert: %d\n",*data[i]);
         insert_object_i = insert(table, data[i],data[i]);
         if (insert_object_i == false)
         {

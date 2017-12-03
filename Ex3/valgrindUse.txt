@@ -1,0 +1,1 @@
+valgrind --leak-check=full --undef-value-errors=yes --track-origins=yes ./progStr 5 a

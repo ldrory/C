@@ -86,13 +86,13 @@
 		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/GenericHashTable.h">
 			<Option target="Ex3"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashIntSearch.c">
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashStrSearch.c">
 			<Option target="Ex3"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.c">
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyStringFunctions.c">
 			<Option target="Ex3"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.h">
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyStringFunctions.h">
 			<Option target="Ex3"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/TableErrorHandle.c">

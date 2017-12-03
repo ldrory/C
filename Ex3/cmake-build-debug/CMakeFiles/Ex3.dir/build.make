@@ -57,52 +57,52 @@ include CMakeFiles/Ex3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Ex3.dir/flags.make
 
-CMakeFiles/Ex3.dir/HashIntSearch.c.o: CMakeFiles/Ex3.dir/flags.make
-CMakeFiles/Ex3.dir/HashIntSearch.c.o: ../HashIntSearch.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex3.dir/HashIntSearch.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex3.dir/HashIntSearch.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashIntSearch.c
+CMakeFiles/Ex3.dir/HashStrSearch.c.o: CMakeFiles/Ex3.dir/flags.make
+CMakeFiles/Ex3.dir/HashStrSearch.c.o: ../HashStrSearch.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex3.dir/HashStrSearch.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex3.dir/HashStrSearch.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashStrSearch.c
 
-CMakeFiles/Ex3.dir/HashIntSearch.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex3.dir/HashIntSearch.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashIntSearch.c > CMakeFiles/Ex3.dir/HashIntSearch.c.i
+CMakeFiles/Ex3.dir/HashStrSearch.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex3.dir/HashStrSearch.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashStrSearch.c > CMakeFiles/Ex3.dir/HashStrSearch.c.i
 
-CMakeFiles/Ex3.dir/HashIntSearch.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex3.dir/HashIntSearch.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashIntSearch.c -o CMakeFiles/Ex3.dir/HashIntSearch.c.s
+CMakeFiles/Ex3.dir/HashStrSearch.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex3.dir/HashStrSearch.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashStrSearch.c -o CMakeFiles/Ex3.dir/HashStrSearch.c.s
 
-CMakeFiles/Ex3.dir/HashIntSearch.c.o.requires:
+CMakeFiles/Ex3.dir/HashStrSearch.c.o.requires:
 
-.PHONY : CMakeFiles/Ex3.dir/HashIntSearch.c.o.requires
+.PHONY : CMakeFiles/Ex3.dir/HashStrSearch.c.o.requires
 
-CMakeFiles/Ex3.dir/HashIntSearch.c.o.provides: CMakeFiles/Ex3.dir/HashIntSearch.c.o.requires
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/HashIntSearch.c.o.provides.build
-.PHONY : CMakeFiles/Ex3.dir/HashIntSearch.c.o.provides
+CMakeFiles/Ex3.dir/HashStrSearch.c.o.provides: CMakeFiles/Ex3.dir/HashStrSearch.c.o.requires
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/HashStrSearch.c.o.provides.build
+.PHONY : CMakeFiles/Ex3.dir/HashStrSearch.c.o.provides
 
-CMakeFiles/Ex3.dir/HashIntSearch.c.o.provides.build: CMakeFiles/Ex3.dir/HashIntSearch.c.o
+CMakeFiles/Ex3.dir/HashStrSearch.c.o.provides.build: CMakeFiles/Ex3.dir/HashStrSearch.c.o
 
 
-CMakeFiles/Ex3.dir/MyIntFunctions.c.o: CMakeFiles/Ex3.dir/flags.make
-CMakeFiles/Ex3.dir/MyIntFunctions.c.o: ../MyIntFunctions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Ex3.dir/MyIntFunctions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex3.dir/MyIntFunctions.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.c
+CMakeFiles/Ex3.dir/MyStringFunctions.c.o: CMakeFiles/Ex3.dir/flags.make
+CMakeFiles/Ex3.dir/MyStringFunctions.c.o: ../MyStringFunctions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Ex3.dir/MyStringFunctions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex3.dir/MyStringFunctions.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyStringFunctions.c
 
-CMakeFiles/Ex3.dir/MyIntFunctions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex3.dir/MyIntFunctions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.c > CMakeFiles/Ex3.dir/MyIntFunctions.c.i
+CMakeFiles/Ex3.dir/MyStringFunctions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex3.dir/MyStringFunctions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyStringFunctions.c > CMakeFiles/Ex3.dir/MyStringFunctions.c.i
 
-CMakeFiles/Ex3.dir/MyIntFunctions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex3.dir/MyIntFunctions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.c -o CMakeFiles/Ex3.dir/MyIntFunctions.c.s
+CMakeFiles/Ex3.dir/MyStringFunctions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex3.dir/MyStringFunctions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyStringFunctions.c -o CMakeFiles/Ex3.dir/MyStringFunctions.c.s
 
-CMakeFiles/Ex3.dir/MyIntFunctions.c.o.requires:
+CMakeFiles/Ex3.dir/MyStringFunctions.c.o.requires:
 
-.PHONY : CMakeFiles/Ex3.dir/MyIntFunctions.c.o.requires
+.PHONY : CMakeFiles/Ex3.dir/MyStringFunctions.c.o.requires
 
-CMakeFiles/Ex3.dir/MyIntFunctions.c.o.provides: CMakeFiles/Ex3.dir/MyIntFunctions.c.o.requires
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/MyIntFunctions.c.o.provides.build
-.PHONY : CMakeFiles/Ex3.dir/MyIntFunctions.c.o.provides
+CMakeFiles/Ex3.dir/MyStringFunctions.c.o.provides: CMakeFiles/Ex3.dir/MyStringFunctions.c.o.requires
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/MyStringFunctions.c.o.provides.build
+.PHONY : CMakeFiles/Ex3.dir/MyStringFunctions.c.o.provides
 
-CMakeFiles/Ex3.dir/MyIntFunctions.c.o.provides.build: CMakeFiles/Ex3.dir/MyIntFunctions.c.o
+CMakeFiles/Ex3.dir/MyStringFunctions.c.o.provides.build: CMakeFiles/Ex3.dir/MyStringFunctions.c.o
 
 
 CMakeFiles/Ex3.dir/GenericHashTable.c.o: CMakeFiles/Ex3.dir/flags.make
@@ -155,16 +155,16 @@ CMakeFiles/Ex3.dir/TableErrorHandle.c.o.provides.build: CMakeFiles/Ex3.dir/Table
 
 # Object files for target Ex3
 Ex3_OBJECTS = \
-"CMakeFiles/Ex3.dir/HashIntSearch.c.o" \
-"CMakeFiles/Ex3.dir/MyIntFunctions.c.o" \
+"CMakeFiles/Ex3.dir/HashStrSearch.c.o" \
+"CMakeFiles/Ex3.dir/MyStringFunctions.c.o" \
 "CMakeFiles/Ex3.dir/GenericHashTable.c.o" \
 "CMakeFiles/Ex3.dir/TableErrorHandle.c.o"
 
 # External object files for target Ex3
 Ex3_EXTERNAL_OBJECTS =
 
-Ex3.exe: CMakeFiles/Ex3.dir/HashIntSearch.c.o
-Ex3.exe: CMakeFiles/Ex3.dir/MyIntFunctions.c.o
+Ex3.exe: CMakeFiles/Ex3.dir/HashStrSearch.c.o
+Ex3.exe: CMakeFiles/Ex3.dir/MyStringFunctions.c.o
 Ex3.exe: CMakeFiles/Ex3.dir/GenericHashTable.c.o
 Ex3.exe: CMakeFiles/Ex3.dir/TableErrorHandle.c.o
 Ex3.exe: CMakeFiles/Ex3.dir/build.make
@@ -177,8 +177,8 @@ CMakeFiles/Ex3.dir/build: Ex3.exe
 
 .PHONY : CMakeFiles/Ex3.dir/build
 
-CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/HashIntSearch.c.o.requires
-CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/MyIntFunctions.c.o.requires
+CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/HashStrSearch.c.o.requires
+CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/MyStringFunctions.c.o.requires
 CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/GenericHashTable.c.o.requires
 CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/TableErrorHandle.c.o.requires
 

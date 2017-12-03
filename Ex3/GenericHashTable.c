@@ -107,7 +107,7 @@ int insert(const TableP table, const void *key, DataP object)
 
     // get the index to insert to: i = d*H(k,n)
     int i = table->d * table->hfun(key, table->size);
-    fprintf(stderr, "%d\n",i);
+
     // search avialable place in ragne [i,i+d]
     for(int j = i; j < i + table->d; ++j)
     {
@@ -225,7 +225,7 @@ DataP getDataAt(const TableP table, int arrCell)
     // check if null pointer exception
     CHECK_IF_NULL(table, NULL);
 
-    if (arrCell > table->size - 1 || arrCell < 0)
+    if (arrCell > (int)table->size - 1 || arrCell < 0)
     {
         fprintf(stderr, "Boundry Error: arrCell Must be in [0,sizeTable-1]");
         return NULL;
@@ -246,7 +246,7 @@ ConstKeyP getKeyAt(const TableP table, int arrCell)
     // check if null pointer exception
     CHECK_IF_NULL(table, NULL);
 
-    if (arrCell > table->size - 1 || arrCell < 0)
+    if (arrCell > (int)table->size - 1 || arrCell < 0)
     {
         fprintf(stderr, "Boundry Error: arrCell Must be in [0,sizeTable-1]");
         return NULL;
@@ -262,18 +262,18 @@ ConstKeyP getKeyAt(const TableP table, int arrCell)
  */
 void printTable(const TableP table)
 {
-    for (int i = 0; i < table->size * table->d; ++i)
+    for (size_t i = 0; i < table->size * table->d; ++i)
     {
         int status = table->object[i]->data == NULL ? 0 : 1;
 
         switch (status)
         {
             case 0:
-                printf("[%d]\t\n", i);
+                printf("[%lu]\t\n", i);
                 break;
 
             case 1:
-                printf("[%d]\t", i);
+                printf("[%lu]\t", i);
                 table->printKeyFun(table->object[i]->key);
                 printf(",");
                 table->printDataFun(table->object[i]->data);
@@ -298,7 +298,7 @@ void freeTable(TableP table)
     }
 
     // free all the members
-    for (int i = 0; i < table->size * table->d; ++i)
+    for (size_t i = 0; i < table->size * table->d; ++i)
     {
         // free every cell
         table->freeKey(table->object[i]->key);
@@ -324,7 +324,7 @@ static void expandTable(TableP table)
     }
 
     // every cell (i) in the table will move to cell (i*2)
-    for (int i = 0; i < table->size * table->d; ++i)
+    for (size_t i = 0; i < table->size * table->d; ++i)
     {
         // even cells pointer
         expanded[i * 2] = table->object[i];
@@ -345,7 +345,7 @@ static ObjectP* mallocObjectArr(size_t size)
     ObjectP *obj = malloc(sizeof(ObjectP) * size);
     CHECK_ALLOCATION(obj, NULL);
 
-    for (int i = 0; i < size; ++i)
+    for (size_t i = 0; i < size; ++i)
     {
         obj[i] = malloc(sizeof(Object));
         CHECK_ALLOCATION(obj[i], NULL);

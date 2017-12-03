@@ -6,12 +6,12 @@ CMakeFiles/Ex3.dir/GenericHashTable.c.o: ../GenericHashTable.h
 CMakeFiles/Ex3.dir/GenericHashTable.c.o: ../Key.h
 CMakeFiles/Ex3.dir/GenericHashTable.c.o: ../TableErrorHandle.h
 
-CMakeFiles/Ex3.dir/HashIntSearch.c.o: ../GenericHashTable.h
-CMakeFiles/Ex3.dir/HashIntSearch.c.o: ../HashIntSearch.c
-CMakeFiles/Ex3.dir/HashIntSearch.c.o: ../Key.h
-CMakeFiles/Ex3.dir/HashIntSearch.c.o: ../MyIntFunctions.h
+CMakeFiles/Ex3.dir/HashStrSearch.c.o: ../GenericHashTable.h
+CMakeFiles/Ex3.dir/HashStrSearch.c.o: ../HashStrSearch.c
+CMakeFiles/Ex3.dir/HashStrSearch.c.o: ../Key.h
+CMakeFiles/Ex3.dir/HashStrSearch.c.o: ../MyStringFunctions.h
 
-CMakeFiles/Ex3.dir/MyIntFunctions.c.o: ../MyIntFunctions.c
+CMakeFiles/Ex3.dir/MyStringFunctions.c.o: ../MyStringFunctions.c
 
 CMakeFiles/Ex3.dir/TableErrorHandle.c.o: ../TableErrorHandle.c
 CMakeFiles/Ex3.dir/TableErrorHandle.c.o: ../TableErrorHandle.h

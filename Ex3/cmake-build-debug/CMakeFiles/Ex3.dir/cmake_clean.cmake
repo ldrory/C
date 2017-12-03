@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ex3.dir/HashIntSearch.c.o"
-  "CMakeFiles/Ex3.dir/MyIntFunctions.c.o"
+  "CMakeFiles/Ex3.dir/HashStrSearch.c.o"
+  "CMakeFiles/Ex3.dir/MyStringFunctions.c.o"
   "CMakeFiles/Ex3.dir/GenericHashTable.c.o"
   "CMakeFiles/Ex3.dir/TableErrorHandle.c.o"
   "Ex3.pdb"

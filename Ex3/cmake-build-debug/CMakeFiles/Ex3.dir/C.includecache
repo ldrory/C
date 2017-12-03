@@ -22,27 +22,29 @@ stdbool.h
 Key.h
 /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/Key.h
 
-/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashIntSearch.c
+/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashStrSearch.c
 stdio.h
 -
 stdlib.h
+-
+string.h
 -
 GenericHashTable.h
 /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/GenericHashTable.h
-MyIntFunctions.h
-/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.h
+MyStringFunctions.h
+/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyStringFunctions.h
 
 /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/Key.h
 
-/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.c
+/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyStringFunctions.c
 stdio.h
 -
 stdlib.h
 -
+string.h
+-
 
-/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.h
-Key.h
-/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/Key.h
+/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyStringFunctions.h
 
 /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/TableErrorHandle.c
 stdio.h

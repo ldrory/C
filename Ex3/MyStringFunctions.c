@@ -8,9 +8,13 @@
  */
 void* cloneStr(const void*  s)
 {
+	char* l = (char*) s;
+
 	// allocate memory for the string cloned
-	char* cloned;
-	return memcopy(cloned, s, strlen( (char*)s )+1);
+	char* cloned = malloc(strlen(l)+1);
+	cloned = memcpy(cloned, l, strlen(l)+1);
+
+	return (void*)cloned;
 }
 
 /**
@@ -33,11 +37,11 @@ int strFcn (const void*  s, size_t tableSize)
 	// initialiez ascii sum to be 0
 	int asciiSum = 0;
 
-	for (int i = 0; i < strlen((char*)s); ++i)
+	for (unsigned int i = 0; i < strlen((char*)s); ++i)
 	{
 		asciiSum += *((char*)s + i);
 	}
-	return ascii % tableSize;
+	return asciiSum % tableSize;
 }
 
 /**
@@ -47,7 +51,7 @@ int strFcn (const void*  s, size_t tableSize)
  */
 void strPrint (const void*  s)
 {
-	printf("%s", *((char*)s));
+	printf("%s", ((char*)s));
 }
 
 /**
