@@ -45,7 +45,7 @@ int intFcn (const void* key, size_t tableSize)
 void intPrint (const void* key)
 {
 	// print the int
-	printf("%d", *((int*)key));
+    printf("%d", *((int*)key));
 }
 
 /**
@@ -56,6 +56,10 @@ void intPrint (const void* key)
  * 
  */
 int intCompare (const void* comp1, const void* comp2)
- {
- 	return *(int*)comp1 == *(int*)comp2 ? EQUAL : NOT_EQUAL;
- }
+{
+    if (comp1 == NULL || comp2 == NULL)
+    {
+        return NOT_EQUAL;
+    }
+    return *(int*)comp1 == *(int*)comp2 ? EQUAL : NOT_EQUAL;
+}

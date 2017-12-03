@@ -159,15 +159,18 @@ DataP removeData(TableP table, const void *key)
     // search in range [i,i+d]
     for(int j = i; j < i + table->d; ++j)
     {
-        // case 1: compare i'th cell with key
-        if (table->fcomp(table->object[j]->key, key) == 0)
+        if (table->object[j]->data != NULL)
         {
-            // get the ejectedData and make the cell[index] available
-            DataP ejectedData = table->object[j]->data;
-            table->object[j]->data = NULL;
-            table->freeKey(table->object[j]->key);
-            table->object[j]->key = NULL;
-            return ejectedData;
+            // case 1: compare i'th cell with key
+            if (table->fcomp(table->object[j]->key, key) == 0)
+            {
+                // get the ejectedData and make the cell[index] available
+                DataP ejectedData = table->object[j]->data;
+                table->object[j]->data = NULL;
+                table->freeKey(table->object[j]->key);
+                table->object[j]->key = NULL;
+                return ejectedData;
+            }
         }
     }
     // not found
@@ -196,17 +199,19 @@ DataP findData(const TableP table, const void *key, int *arrCell)
     // search in range [i,i+d]
     for(int j = i; j < i + table->d; ++j)
     {
-        // case 1: compare i'th cell with key
-        if (table->fcomp(table->object[j]->key, key) == 0)
+        if (table->object[j]->data != NULL)
         {
-            *arrCell = j;
-            return table->object[j]->data;
+            // case 1: compare i'th cell with key
+            if (table->fcomp(table->object[j]->key, key) == 0)
+            {
+                *arrCell = j;
+                return table->object[j]->data;
+            }
         }
     }
     // not found
     *arrCell = -1;
     return NULL;
-
 }
 
 

@@ -3,8 +3,8 @@
 #include "GenericHashTable.h"
 #include "MyIntFunctions.h"
 
-#define MINIMAL_VAL -15
-#define MAXIMAL_VAL 15
+#define MINIMAL_VAL 0
+#define MAXIMAL_VAL 10
 #define DATA_SIZE (MAXIMAL_VAL - MINIMAL_VAL +1)
 /**
 * main
@@ -64,7 +64,8 @@ int main(int argc, char *argv[])
     int listNode;
     
     int *res=findData(table, &val, &arrCell);
-    printf("%d=%d\t%d\t\n", *res,val, arrCell);
+    if (res != NULL)
+        printf("%d=%d\t%d\t\n", *res,val, arrCell);
 
 
     // (6) free the table
