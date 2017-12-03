@@ -57,9 +57,57 @@ include CMakeFiles/Ex3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Ex3.dir/flags.make
 
+CMakeFiles/Ex3.dir/HashIntSearch.c.o: CMakeFiles/Ex3.dir/flags.make
+CMakeFiles/Ex3.dir/HashIntSearch.c.o: ../HashIntSearch.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex3.dir/HashIntSearch.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex3.dir/HashIntSearch.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashIntSearch.c
+
+CMakeFiles/Ex3.dir/HashIntSearch.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex3.dir/HashIntSearch.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashIntSearch.c > CMakeFiles/Ex3.dir/HashIntSearch.c.i
+
+CMakeFiles/Ex3.dir/HashIntSearch.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex3.dir/HashIntSearch.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashIntSearch.c -o CMakeFiles/Ex3.dir/HashIntSearch.c.s
+
+CMakeFiles/Ex3.dir/HashIntSearch.c.o.requires:
+
+.PHONY : CMakeFiles/Ex3.dir/HashIntSearch.c.o.requires
+
+CMakeFiles/Ex3.dir/HashIntSearch.c.o.provides: CMakeFiles/Ex3.dir/HashIntSearch.c.o.requires
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/HashIntSearch.c.o.provides.build
+.PHONY : CMakeFiles/Ex3.dir/HashIntSearch.c.o.provides
+
+CMakeFiles/Ex3.dir/HashIntSearch.c.o.provides.build: CMakeFiles/Ex3.dir/HashIntSearch.c.o
+
+
+CMakeFiles/Ex3.dir/MyIntFunctions.c.o: CMakeFiles/Ex3.dir/flags.make
+CMakeFiles/Ex3.dir/MyIntFunctions.c.o: ../MyIntFunctions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Ex3.dir/MyIntFunctions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex3.dir/MyIntFunctions.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.c
+
+CMakeFiles/Ex3.dir/MyIntFunctions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex3.dir/MyIntFunctions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.c > CMakeFiles/Ex3.dir/MyIntFunctions.c.i
+
+CMakeFiles/Ex3.dir/MyIntFunctions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex3.dir/MyIntFunctions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.c -o CMakeFiles/Ex3.dir/MyIntFunctions.c.s
+
+CMakeFiles/Ex3.dir/MyIntFunctions.c.o.requires:
+
+.PHONY : CMakeFiles/Ex3.dir/MyIntFunctions.c.o.requires
+
+CMakeFiles/Ex3.dir/MyIntFunctions.c.o.provides: CMakeFiles/Ex3.dir/MyIntFunctions.c.o.requires
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/MyIntFunctions.c.o.provides.build
+.PHONY : CMakeFiles/Ex3.dir/MyIntFunctions.c.o.provides
+
+CMakeFiles/Ex3.dir/MyIntFunctions.c.o.provides.build: CMakeFiles/Ex3.dir/MyIntFunctions.c.o
+
+
 CMakeFiles/Ex3.dir/GenericHashTable.c.o: CMakeFiles/Ex3.dir/flags.make
 CMakeFiles/Ex3.dir/GenericHashTable.c.o: ../GenericHashTable.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex3.dir/GenericHashTable.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Ex3.dir/GenericHashTable.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex3.dir/GenericHashTable.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/GenericHashTable.c
 
 CMakeFiles/Ex3.dir/GenericHashTable.c.i: cmake_force
@@ -81,26 +129,58 @@ CMakeFiles/Ex3.dir/GenericHashTable.c.o.provides: CMakeFiles/Ex3.dir/GenericHash
 CMakeFiles/Ex3.dir/GenericHashTable.c.o.provides.build: CMakeFiles/Ex3.dir/GenericHashTable.c.o
 
 
+CMakeFiles/Ex3.dir/TableErrorHandle.c.o: CMakeFiles/Ex3.dir/flags.make
+CMakeFiles/Ex3.dir/TableErrorHandle.c.o: ../TableErrorHandle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Ex3.dir/TableErrorHandle.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex3.dir/TableErrorHandle.c.o   -c /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/TableErrorHandle.c
+
+CMakeFiles/Ex3.dir/TableErrorHandle.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex3.dir/TableErrorHandle.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/TableErrorHandle.c > CMakeFiles/Ex3.dir/TableErrorHandle.c.i
+
+CMakeFiles/Ex3.dir/TableErrorHandle.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex3.dir/TableErrorHandle.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/TableErrorHandle.c -o CMakeFiles/Ex3.dir/TableErrorHandle.c.s
+
+CMakeFiles/Ex3.dir/TableErrorHandle.c.o.requires:
+
+.PHONY : CMakeFiles/Ex3.dir/TableErrorHandle.c.o.requires
+
+CMakeFiles/Ex3.dir/TableErrorHandle.c.o.provides: CMakeFiles/Ex3.dir/TableErrorHandle.c.o.requires
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/TableErrorHandle.c.o.provides.build
+.PHONY : CMakeFiles/Ex3.dir/TableErrorHandle.c.o.provides
+
+CMakeFiles/Ex3.dir/TableErrorHandle.c.o.provides.build: CMakeFiles/Ex3.dir/TableErrorHandle.c.o
+
+
 # Object files for target Ex3
 Ex3_OBJECTS = \
-"CMakeFiles/Ex3.dir/GenericHashTable.c.o"
+"CMakeFiles/Ex3.dir/HashIntSearch.c.o" \
+"CMakeFiles/Ex3.dir/MyIntFunctions.c.o" \
+"CMakeFiles/Ex3.dir/GenericHashTable.c.o" \
+"CMakeFiles/Ex3.dir/TableErrorHandle.c.o"
 
 # External object files for target Ex3
 Ex3_EXTERNAL_OBJECTS =
 
-libEx3.a: CMakeFiles/Ex3.dir/GenericHashTable.c.o
-libEx3.a: CMakeFiles/Ex3.dir/build.make
-libEx3.a: CMakeFiles/Ex3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libEx3.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/Ex3.dir/cmake_clean_target.cmake
+Ex3.exe: CMakeFiles/Ex3.dir/HashIntSearch.c.o
+Ex3.exe: CMakeFiles/Ex3.dir/MyIntFunctions.c.o
+Ex3.exe: CMakeFiles/Ex3.dir/GenericHashTable.c.o
+Ex3.exe: CMakeFiles/Ex3.dir/TableErrorHandle.c.o
+Ex3.exe: CMakeFiles/Ex3.dir/build.make
+Ex3.exe: CMakeFiles/Ex3.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Ex3.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ex3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Ex3.dir/build: libEx3.a
+CMakeFiles/Ex3.dir/build: Ex3.exe
 
 .PHONY : CMakeFiles/Ex3.dir/build
 
+CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/HashIntSearch.c.o.requires
+CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/MyIntFunctions.c.o.requires
 CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/GenericHashTable.c.o.requires
+CMakeFiles/Ex3.dir/requires: CMakeFiles/Ex3.dir/TableErrorHandle.c.o.requires
 
 .PHONY : CMakeFiles/Ex3.dir/requires
 

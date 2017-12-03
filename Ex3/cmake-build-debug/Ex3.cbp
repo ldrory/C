@@ -38,10 +38,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Ex3">
-				<Option output="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/libEx3.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/Ex3.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
@@ -59,10 +59,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Ex3/fast">
-				<Option output="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/libEx3.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/Ex3.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
@@ -84,6 +84,24 @@
 			<Option target="Ex3"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/GenericHashTable.h">
+			<Option target="Ex3"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/HashIntSearch.c">
+			<Option target="Ex3"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.c">
+			<Option target="Ex3"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/MyIntFunctions.h">
+			<Option target="Ex3"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/TableErrorHandle.c">
+			<Option target="Ex3"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/TableErrorHandle.h">
+			<Option target="Ex3"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/key.h">
 			<Option target="Ex3"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/CMakeLists.txt">

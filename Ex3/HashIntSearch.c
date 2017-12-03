@@ -13,11 +13,12 @@ int main(int argc, char *argv[])
 {
 
     // (1) read table size and a key to find
-    if (argc < 3) 
+    if (argc < 3)
     {
         fprintf(stderr, "Usage: GenericHashTable <table size> <key>\n");
         exit(1);
     }
+
 
     size_t tableSize;
     int val;
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
         printf("ERROR: failed to create table!\n");
         return 0;
     }
-    
+
 
     // (3) insert objects
     
@@ -45,9 +46,9 @@ int main(int argc, char *argv[])
     {
         data[i] = malloc(sizeof(int));
         *data[i] = i+MINIMAL_VAL;
-        
+        fprintf(stderr, "insert: %d\n",*data[i]);
         insert_object_i = insert(table, data[i],data[i]);
-        if (insert_object_i == false)	
+        if (insert_object_i == false)
         {
             printf("ERROR: failed to insert object %d key %d data %d to the table!\n", i,*data[i],*data[i]);
             return 0;   

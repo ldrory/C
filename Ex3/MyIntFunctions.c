@@ -32,7 +32,9 @@ void freeInt( void* i)
  */
 int intFcn (const void* key, size_t tableSize)
 {
-	return (*(int*)key % tableSize);
+    int posKey = *(int*)key;
+	while(posKey < 0) { posKey += tableSize; };
+	return (posKey % tableSize);
 }
 
 /**

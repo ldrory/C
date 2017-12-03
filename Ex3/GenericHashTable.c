@@ -73,7 +73,7 @@ TableP createTable(size_t tableSize, CloneKeyFcn cloneKey, FreeKeyFcn freeKey, H
     TableP table = malloc(sizeof(Table));
     CHECK_ALLOCATION(table, NULL);
 
-    table->object = mallocObjectArr(table->size);
+    table->object = mallocObjectArr(tableSize);
     CHECK_ALLOCATION(table->object, NULL);
 
     // initialized Table
@@ -107,7 +107,7 @@ int insert(const TableP table, const void *key, DataP object)
 
     // get the index to insert to: i = d*H(k,n)
     int i = table->d * table->hfun(key, table->size);
-
+    fprintf(stderr, "%d\n",i);
     // search avialable place in ragne [i,i+d]
     for(int j = i; j < i + table->d; ++j)
     {
@@ -257,7 +257,7 @@ ConstKeyP getKeyAt(const TableP table, int arrCell)
  */
 void printTable(const TableP table)
 {
-    for (int i = 0; i < table->size; ++i)
+    for (int i = 0; i < table->size * table->d; ++i)
     {
         int status = table->object[i]->data == NULL ? 0 : 1;
 

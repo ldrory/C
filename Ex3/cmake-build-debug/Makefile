@@ -150,6 +150,87 @@ GenericHashTable.c.s:
 	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/GenericHashTable.c.s
 .PHONY : GenericHashTable.c.s
 
+HashIntSearch.o: HashIntSearch.c.o
+
+.PHONY : HashIntSearch.o
+
+# target to build an object file
+HashIntSearch.c.o:
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/HashIntSearch.c.o
+.PHONY : HashIntSearch.c.o
+
+HashIntSearch.i: HashIntSearch.c.i
+
+.PHONY : HashIntSearch.i
+
+# target to preprocess a source file
+HashIntSearch.c.i:
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/HashIntSearch.c.i
+.PHONY : HashIntSearch.c.i
+
+HashIntSearch.s: HashIntSearch.c.s
+
+.PHONY : HashIntSearch.s
+
+# target to generate assembly for a file
+HashIntSearch.c.s:
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/HashIntSearch.c.s
+.PHONY : HashIntSearch.c.s
+
+MyIntFunctions.o: MyIntFunctions.c.o
+
+.PHONY : MyIntFunctions.o
+
+# target to build an object file
+MyIntFunctions.c.o:
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/MyIntFunctions.c.o
+.PHONY : MyIntFunctions.c.o
+
+MyIntFunctions.i: MyIntFunctions.c.i
+
+.PHONY : MyIntFunctions.i
+
+# target to preprocess a source file
+MyIntFunctions.c.i:
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/MyIntFunctions.c.i
+.PHONY : MyIntFunctions.c.i
+
+MyIntFunctions.s: MyIntFunctions.c.s
+
+.PHONY : MyIntFunctions.s
+
+# target to generate assembly for a file
+MyIntFunctions.c.s:
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/MyIntFunctions.c.s
+.PHONY : MyIntFunctions.c.s
+
+TableErrorHandle.o: TableErrorHandle.c.o
+
+.PHONY : TableErrorHandle.o
+
+# target to build an object file
+TableErrorHandle.c.o:
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/TableErrorHandle.c.o
+.PHONY : TableErrorHandle.c.o
+
+TableErrorHandle.i: TableErrorHandle.c.i
+
+.PHONY : TableErrorHandle.i
+
+# target to preprocess a source file
+TableErrorHandle.c.i:
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/TableErrorHandle.c.i
+.PHONY : TableErrorHandle.c.i
+
+TableErrorHandle.s: TableErrorHandle.c.s
+
+.PHONY : TableErrorHandle.s
+
+# target to generate assembly for a file
+TableErrorHandle.c.s:
+	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/TableErrorHandle.c.s
+.PHONY : TableErrorHandle.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +243,15 @@ help:
 	@echo "... GenericHashTable.o"
 	@echo "... GenericHashTable.i"
 	@echo "... GenericHashTable.s"
+	@echo "... HashIntSearch.o"
+	@echo "... HashIntSearch.i"
+	@echo "... HashIntSearch.s"
+	@echo "... MyIntFunctions.o"
+	@echo "... MyIntFunctions.i"
+	@echo "... MyIntFunctions.s"
+	@echo "... TableErrorHandle.o"
+	@echo "... TableErrorHandle.i"
+	@echo "... TableErrorHandle.s"
 .PHONY : help
 
 
