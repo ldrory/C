@@ -22,6 +22,7 @@ void freeInt( void* i)
 {
 	// free the i pointer to int
 	free(i);
+    i = NULL;
 }
 
 /**

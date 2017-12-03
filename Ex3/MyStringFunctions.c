@@ -23,6 +23,7 @@ void* cloneStr(const void*  s)
 void freeStr(void* s)
 {
 	free(s);
+    s = NULL;
 }
 
 

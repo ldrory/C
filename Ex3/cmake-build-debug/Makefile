@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Ex3
+# Target rules for targets named Ex3Int
 
 # Build rule for target.
-Ex3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Ex3
-.PHONY : Ex3
+Ex3Int: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Ex3Int
+.PHONY : Ex3Int
 
 # fast build rule for target.
-Ex3/fast:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/build
-.PHONY : Ex3/fast
+Ex3Int/fast:
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/build
+.PHONY : Ex3Int/fast
+
+#=============================================================================
+# Target rules for targets named Ex3Str
+
+# Build rule for target.
+Ex3Str: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Ex3Str
+.PHONY : Ex3Str
+
+# fast build rule for target.
+Ex3Str/fast:
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/build
+.PHONY : Ex3Str/fast
 
 GenericHashTable.o: GenericHashTable.c.o
 
@@ -129,7 +142,8 @@ GenericHashTable.o: GenericHashTable.c.o
 
 # target to build an object file
 GenericHashTable.c.o:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/GenericHashTable.c.o
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/GenericHashTable.c.o
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/GenericHashTable.c.o
 .PHONY : GenericHashTable.c.o
 
 GenericHashTable.i: GenericHashTable.c.i
@@ -138,7 +152,8 @@ GenericHashTable.i: GenericHashTable.c.i
 
 # target to preprocess a source file
 GenericHashTable.c.i:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/GenericHashTable.c.i
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/GenericHashTable.c.i
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/GenericHashTable.c.i
 .PHONY : GenericHashTable.c.i
 
 GenericHashTable.s: GenericHashTable.c.s
@@ -147,8 +162,36 @@ GenericHashTable.s: GenericHashTable.c.s
 
 # target to generate assembly for a file
 GenericHashTable.c.s:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/GenericHashTable.c.s
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/GenericHashTable.c.s
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/GenericHashTable.c.s
 .PHONY : GenericHashTable.c.s
+
+HashIntSearch.o: HashIntSearch.c.o
+
+.PHONY : HashIntSearch.o
+
+# target to build an object file
+HashIntSearch.c.o:
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/HashIntSearch.c.o
+.PHONY : HashIntSearch.c.o
+
+HashIntSearch.i: HashIntSearch.c.i
+
+.PHONY : HashIntSearch.i
+
+# target to preprocess a source file
+HashIntSearch.c.i:
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/HashIntSearch.c.i
+.PHONY : HashIntSearch.c.i
+
+HashIntSearch.s: HashIntSearch.c.s
+
+.PHONY : HashIntSearch.s
+
+# target to generate assembly for a file
+HashIntSearch.c.s:
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/HashIntSearch.c.s
+.PHONY : HashIntSearch.c.s
 
 HashStrSearch.o: HashStrSearch.c.o
 
@@ -156,7 +199,7 @@ HashStrSearch.o: HashStrSearch.c.o
 
 # target to build an object file
 HashStrSearch.c.o:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/HashStrSearch.c.o
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/HashStrSearch.c.o
 .PHONY : HashStrSearch.c.o
 
 HashStrSearch.i: HashStrSearch.c.i
@@ -165,7 +208,7 @@ HashStrSearch.i: HashStrSearch.c.i
 
 # target to preprocess a source file
 HashStrSearch.c.i:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/HashStrSearch.c.i
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/HashStrSearch.c.i
 .PHONY : HashStrSearch.c.i
 
 HashStrSearch.s: HashStrSearch.c.s
@@ -174,8 +217,35 @@ HashStrSearch.s: HashStrSearch.c.s
 
 # target to generate assembly for a file
 HashStrSearch.c.s:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/HashStrSearch.c.s
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/HashStrSearch.c.s
 .PHONY : HashStrSearch.c.s
+
+MyIntFunctions.o: MyIntFunctions.c.o
+
+.PHONY : MyIntFunctions.o
+
+# target to build an object file
+MyIntFunctions.c.o:
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/MyIntFunctions.c.o
+.PHONY : MyIntFunctions.c.o
+
+MyIntFunctions.i: MyIntFunctions.c.i
+
+.PHONY : MyIntFunctions.i
+
+# target to preprocess a source file
+MyIntFunctions.c.i:
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/MyIntFunctions.c.i
+.PHONY : MyIntFunctions.c.i
+
+MyIntFunctions.s: MyIntFunctions.c.s
+
+.PHONY : MyIntFunctions.s
+
+# target to generate assembly for a file
+MyIntFunctions.c.s:
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/MyIntFunctions.c.s
+.PHONY : MyIntFunctions.c.s
 
 MyStringFunctions.o: MyStringFunctions.c.o
 
@@ -183,7 +253,7 @@ MyStringFunctions.o: MyStringFunctions.c.o
 
 # target to build an object file
 MyStringFunctions.c.o:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/MyStringFunctions.c.o
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/MyStringFunctions.c.o
 .PHONY : MyStringFunctions.c.o
 
 MyStringFunctions.i: MyStringFunctions.c.i
@@ -192,7 +262,7 @@ MyStringFunctions.i: MyStringFunctions.c.i
 
 # target to preprocess a source file
 MyStringFunctions.c.i:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/MyStringFunctions.c.i
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/MyStringFunctions.c.i
 .PHONY : MyStringFunctions.c.i
 
 MyStringFunctions.s: MyStringFunctions.c.s
@@ -201,7 +271,7 @@ MyStringFunctions.s: MyStringFunctions.c.s
 
 # target to generate assembly for a file
 MyStringFunctions.c.s:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/MyStringFunctions.c.s
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/MyStringFunctions.c.s
 .PHONY : MyStringFunctions.c.s
 
 TableErrorHandle.o: TableErrorHandle.c.o
@@ -210,7 +280,8 @@ TableErrorHandle.o: TableErrorHandle.c.o
 
 # target to build an object file
 TableErrorHandle.c.o:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/TableErrorHandle.c.o
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/TableErrorHandle.c.o
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/TableErrorHandle.c.o
 .PHONY : TableErrorHandle.c.o
 
 TableErrorHandle.i: TableErrorHandle.c.i
@@ -219,7 +290,8 @@ TableErrorHandle.i: TableErrorHandle.c.i
 
 # target to preprocess a source file
 TableErrorHandle.c.i:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/TableErrorHandle.c.i
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/TableErrorHandle.c.i
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/TableErrorHandle.c.i
 .PHONY : TableErrorHandle.c.i
 
 TableErrorHandle.s: TableErrorHandle.c.s
@@ -228,7 +300,8 @@ TableErrorHandle.s: TableErrorHandle.c.s
 
 # target to generate assembly for a file
 TableErrorHandle.c.s:
-	$(MAKE) -f CMakeFiles/Ex3.dir/build.make CMakeFiles/Ex3.dir/TableErrorHandle.c.s
+	$(MAKE) -f CMakeFiles/Ex3Int.dir/build.make CMakeFiles/Ex3Int.dir/TableErrorHandle.c.s
+	$(MAKE) -f CMakeFiles/Ex3Str.dir/build.make CMakeFiles/Ex3Str.dir/TableErrorHandle.c.s
 .PHONY : TableErrorHandle.c.s
 
 # Help Target
@@ -239,13 +312,20 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Ex3"
+	@echo "... Ex3Int"
+	@echo "... Ex3Str"
 	@echo "... GenericHashTable.o"
 	@echo "... GenericHashTable.i"
 	@echo "... GenericHashTable.s"
+	@echo "... HashIntSearch.o"
+	@echo "... HashIntSearch.i"
+	@echo "... HashIntSearch.s"
 	@echo "... HashStrSearch.o"
 	@echo "... HashStrSearch.i"
 	@echo "... HashStrSearch.s"
+	@echo "... MyIntFunctions.o"
+	@echo "... MyIntFunctions.i"
+	@echo "... MyIntFunctions.s"
 	@echo "... MyStringFunctions.o"
 	@echo "... MyStringFunctions.i"
 	@echo "... MyStringFunctions.s"

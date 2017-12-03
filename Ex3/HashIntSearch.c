@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     }
 
 
-    size_t tableSize;
+    size_t tableSize =0;
     int val;
     sscanf(argv[1], "%d", (unsigned int *)(&tableSize));
     sscanf(argv[2], "%d", &val);

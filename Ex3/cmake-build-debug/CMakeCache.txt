@@ -137,7 +137,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy.exe
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump.exe
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Ex3
+CMAKE_PROJECT_NAME:STATIC=Ex3Int
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib.exe
@@ -207,6 +207,18 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip.exe
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//Value Computed by CMake
+Ex3Int_BINARY_DIR:STATIC=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug
+
+//Value Computed by CMake
+Ex3Int_SOURCE_DIR:STATIC=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3
+
+//Value Computed by CMake
+Ex3Str_BINARY_DIR:STATIC=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug
+
+//Value Computed by CMake
+Ex3Str_SOURCE_DIR:STATIC=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3
 
 //Value Computed by CMake
 Ex3_BINARY_DIR:STATIC=/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug

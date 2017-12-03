@@ -1,3 +1,4 @@
 /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles/Ex3.dir
+/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles/Ex3Int.dir
+/cygdrive/c/Users/Liran/Documents/GitHub/C/Ex3/cmake-build-debug/CMakeFiles/Ex3Str.dir

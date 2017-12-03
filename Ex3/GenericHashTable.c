@@ -10,6 +10,8 @@
 #define CHECK_ALLOCATION(pointer, error) do{ if (pointer == NULL) \
     { reportError(MEM_OUT); return error; } } while(0)
 
+#define EMPTY 0
+#define NON_EMPTY 1
 
 typedef void *DataP;
 typedef struct Table *TableP;
@@ -22,6 +24,7 @@ static ObjectP *mallocObjectArr(size_t size);
 
 typedef struct Table
 {
+    size_t origSize;
     size_t size;
     int d;
     ObjectP* object;
@@ -77,6 +80,7 @@ TableP createTable(size_t tableSize, CloneKeyFcn cloneKey, FreeKeyFcn freeKey, H
     CHECK_ALLOCATION(table->object, NULL);
 
     // initialized Table
+    table->origSize = tableSize;
     table->size = tableSize;
     table->d = 1;
     table->cloneKey = cloneKey;
@@ -106,7 +110,7 @@ int insert(const TableP table, const void *key, DataP object)
     CHECK_IF_NULL(key, 0);
 
     // get the index to insert to: i = d*H(k,n)
-    int i = table->d * table->hfun(key, table->size);
+    int i = table->d * table->hfun(key, table->origSize);
 
     // search avialable place in ragne [i,i+d]
     for(int j = i; j < i + table->d; ++j)
@@ -154,7 +158,7 @@ DataP removeData(TableP table, const void *key)
     CHECK_IF_NULL(key, NULL);
 
     // get the index to insert to: i = d*H(k,n)
-    int i = table->d * table->hfun(key, table->size);
+    int i = table->d * table->hfun(key, table->origSize);
 
     // search in range [i,i+d]
     for(int j = i; j < i + table->d; ++j)
@@ -164,7 +168,7 @@ DataP removeData(TableP table, const void *key)
             // case 1: compare i'th cell with key
             if (table->fcomp(table->object[j]->key, key) == 0)
             {
-                // get the ejectedData and make the cell[index] available
+                // get the ejectedData and make the cell[j] available
                 DataP ejectedData = table->object[j]->data;
                 table->object[j]->data = NULL;
                 table->freeKey(table->object[j]->key);
@@ -175,7 +179,7 @@ DataP removeData(TableP table, const void *key)
     }
     // not found
     return NULL;
-    }
+}
 
 
 
@@ -194,19 +198,17 @@ DataP findData(const TableP table, const void *key, int *arrCell)
     CHECK_IF_NULL(arrCell, NULL);
 
     // get the index to insert to: i = d*H(k,n)
-    int i = table->d * table->hfun(key, table->size);
+    int i = table->d * table->hfun(key, table->origSize);
 
     // search in range [i,i+d]
     for(int j = i; j < i + table->d; ++j)
     {
-        if (table->object[j]->data != NULL)
+        // case 1: compare i'th cell with key
+        if (table->object[j]->data != NULL
+            && table->fcomp(table->object[j]->key, key) == 0)
         {
-            // case 1: compare i'th cell with key
-            if (table->fcomp(table->object[j]->key, key) == 0)
-            {
-                *arrCell = j;
-                return table->object[j]->data;
-            }
+            *arrCell = j;
+            return table->object[j]->data;
         }
     }
     // not found
@@ -225,6 +227,7 @@ DataP getDataAt(const TableP table, int arrCell)
     // check if null pointer exception
     CHECK_IF_NULL(table, NULL);
 
+    // check arrCell in [0,tableSize-1]
     if (arrCell > (int)table->size - 1 || arrCell < 0)
     {
         fprintf(stderr, "Boundry Error: arrCell Must be in [0,sizeTable-1]");
@@ -246,6 +249,7 @@ ConstKeyP getKeyAt(const TableP table, int arrCell)
     // check if null pointer exception
     CHECK_IF_NULL(table, NULL);
 
+    // check arrCell in [0,tableSize-1]
     if (arrCell > (int)table->size - 1 || arrCell < 0)
     {
         fprintf(stderr, "Boundry Error: arrCell Must be in [0,sizeTable-1]");
@@ -262,17 +266,18 @@ ConstKeyP getKeyAt(const TableP table, int arrCell)
  */
 void printTable(const TableP table)
 {
-    for (size_t i = 0; i < table->size * table->d; ++i)
+    // print every cell
+    for (size_t i = 0; i < table->size; ++i)
     {
-        int status = table->object[i]->data == NULL ? 0 : 1;
+        int status = table->object[i]->data == NULL ? EMPTY : NON_EMPTY;
 
         switch (status)
         {
-            case 0:
+            case EMPTY:
                 printf("[%lu]\t\n", i);
                 break;
 
-            case 1:
+            case NON_EMPTY:
                 printf("[%lu]\t", i);
                 table->printKeyFun(table->object[i]->key);
                 printf(",");
@@ -292,59 +297,64 @@ void printTable(const TableP table)
  */
 void freeTable(TableP table)
 {
+    // check table isn't null
     if (table == NULL)
     {
         return;
     }
 
     // free all the members
-    for (size_t i = 0; i < table->size * table->d; ++i)
+    for (size_t i = 0; i < table->size; ++i)
     {
-        // free every cell
+        // free every key cell & free object pointer
         table->freeKey(table->object[i]->key);
-
         free(table->object[i]);
+        table->object[i] = NULL;
     }
 
     // free object**
     free(table->object);
+    table->object = NULL;
 
     // free table
     free(table);
+    table = NULL;
 }
 
 
 static void expandTable(TableP table)
 {
     // create new object array with double the size
-    ObjectP *expanded = mallocObjectArr(table->size * table->d * 2);
+    ObjectP *expanded = mallocObjectArr(table->size * 2);
     if (expanded == NULL)
     {
         exit(-1);
     }
 
     // every cell (i) in the table will move to cell (i*2)
-    for (size_t i = 0; i < table->size * table->d; ++i)
+    for (size_t i = 0; i < table->size; ++i)
     {
-        // even cells pointer
+        free(expanded[i*2]);
         expanded[i * 2] = table->object[i];
     }
 
-    // free all the objectP
+    // free all the objectP & set new objects
     free(table->object);
     table->object = expanded;
 
-    // increase the d = sizeTable/sizeOrig
-    table->d = table->d * 2;
+    // increase the d = sizeTable/sizeOrig and the size of table
+    table->d *= 2;
+    table->size *= 2;
 }
 
 
 static ObjectP* mallocObjectArr(size_t size)
 {
-    // create new object array with double the size
+    // allocate array of ObjectP*size
     ObjectP *obj = malloc(sizeof(ObjectP) * size);
     CHECK_ALLOCATION(obj, NULL);
 
+    // initialized every cell in object
     for (size_t i = 0; i < size; ++i)
     {
         obj[i] = malloc(sizeof(Object));

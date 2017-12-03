@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/Ex3Int.dir/HashIntSearch.c.o CMakeFiles/Ex3Int.dir/MyIntFunctions.c.o CMakeFiles/Ex3Int.dir/GenericHashTable.c.o CMakeFiles/Ex3Int.dir/TableErrorHandle.c.o  -o Ex3Int.exe -Wl,--out-implib,libEx3Int.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

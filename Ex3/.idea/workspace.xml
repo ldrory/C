@@ -2,7 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="Ex3" targetName="Ex3" />
+      <config projectName="Ex3Int" targetName="Ex3Str" />
+      <config projectName="Ex3Int" targetName="Ex3Int" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -15,21 +16,25 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change beforePath="$PROJECT_DIR$/GenericHashTable.c" afterPath="$PROJECT_DIR$/GenericHashTable.c" />
+      <change beforePath="$PROJECT_DIR$/GenericHashTable.o" afterPath="$PROJECT_DIR$/GenericHashTable.o" />
       <change beforePath="$PROJECT_DIR$/HashIntSearch.c" afterPath="$PROJECT_DIR$/HashIntSearch.c" />
-      <change beforePath="$PROJECT_DIR$/HashStrSearch.c" afterPath="$PROJECT_DIR$/HashStrSearch.c" />
+      <change beforePath="$PROJECT_DIR$/HashIntSearch.o" afterPath="$PROJECT_DIR$/HashIntSearch.o" />
+      <change beforePath="$PROJECT_DIR$/HashStrSearch.o" afterPath="$PROJECT_DIR$/HashStrSearch.o" />
+      <change beforePath="$PROJECT_DIR$/MyIntFunctions.c" afterPath="$PROJECT_DIR$/MyIntFunctions.c" />
+      <change beforePath="$PROJECT_DIR$/MyIntFunctions.o" afterPath="$PROJECT_DIR$/MyIntFunctions.o" />
       <change beforePath="$PROJECT_DIR$/MyStringFunctions.c" afterPath="$PROJECT_DIR$/MyStringFunctions.c" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/C.includecache" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/DependInfo.cmake" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/build.make" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/cmake_clean.cmake" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/depend.internal" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/depend.make" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/link.txt" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Ex3.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Ex3.cbp" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Ex3.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/Ex3.exe" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Ex3.exe.stackdump" afterPath="$PROJECT_DIR$/cmake-build-debug/Ex3.exe.stackdump" />
+      <change beforePath="$PROJECT_DIR$/MyStringFunctions.o" afterPath="$PROJECT_DIR$/MyStringFunctions.o" />
+      <change beforePath="$PROJECT_DIR$/TableErrorHandle.o" afterPath="$PROJECT_DIR$/TableErrorHandle.o" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change beforePath="$PROJECT_DIR$/makefile" afterPath="$PROJECT_DIR$/makefile" />
+      <change beforePath="$PROJECT_DIR$/prog" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/progInt" afterPath="$PROJECT_DIR$/progInt" />
+      <change beforePath="$PROJECT_DIR$/progStr" afterPath="$PROJECT_DIR$/progStr" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,28 +50,9 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="225">
+              <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericHashTable.c" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GenericHashTable.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="303" column="34" lean-forward="true" selection-start-line="303" selection-start-column="34" selection-end-line="303" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#2275#2632#0" expanded="false" />
-                <element signature="e#3927#4062#0" expanded="false" />
-                <element signature="e#3927#4965#0" expanded="false" />
-                <element signature="e#5975#6138#0" expanded="false" />
-                <element signature="e#6512#6675#0" expanded="false" />
-                <element signature="e#7050#7132#0" expanded="false" />
-                <element signature="e#7697#7841#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -74,50 +60,39 @@
       <file leaf-file-name="HashStrSearch.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HashStrSearch.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="64" column="4" lean-forward="true" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+            <state relative-caret-position="138">
+              <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashIntSearch.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HashIntSearch.c">
+      <file leaf-file-name="GenericHashTable.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GenericHashTable.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="68" column="17" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="17" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#2365#2722#0" expanded="false" />
+                <element signature="e#4021#4156#0" expanded="false" />
+                <element signature="e#6027#6190#0" expanded="false" />
+                <element signature="e#6027#6601#0" expanded="false" />
+                <element signature="e#6604#6767#0" expanded="false" />
+                <element signature="e#6604#7179#0" expanded="false" />
+                <element signature="e#7182#7264#0" expanded="false" />
+                <element signature="e#7182#7863#0" expanded="false" />
+                <element signature="e#7866#8010#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyIntFunctions.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyIntFunctions.h">
+      <file leaf-file-name="HashIntSearch.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HashIntSearch.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Key.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Key.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyStringFunctions.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyStringFunctions.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-183">
-              <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+            <state relative-caret-position="300">
+              <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -128,18 +103,8 @@
       <file leaf-file-name="makefile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="string.h" pinned="false" current-in-tab="false">
-        <entry file="file://C:/cygwin64/usr/include/string.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="550">
+              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -166,14 +131,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MyIntFunctions.c" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/makefile" />
         <option value="$PROJECT_DIR$/GenericHashTable.h" />
         <option value="$PROJECT_DIR$/HashStrSearch.c" />
+        <option value="$PROJECT_DIR$/makefile" />
+        <option value="$PROJECT_DIR$/MyStringFunctions.h" />
         <option value="$PROJECT_DIR$/MyStringFunctions.c" />
-        <option value="$PROJECT_DIR$/HashIntSearch.c" />
+        <option value="$PROJECT_DIR$/MyIntFunctions.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/GenericHashTable.c" />
+        <option value="$PROJECT_DIR$/HashIntSearch.c" />
       </list>
     </option>
   </component>
@@ -209,7 +175,7 @@
         <subPane>
           <expand>
             <path>
-              <item name="Ex3" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Ex3Int" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="Ex3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -235,16 +201,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Ex3">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex3" RUN_TARGET_NAME="Ex3" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="Application.Ex3Int">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex3Int" RUN_TARGET_NAME="Ex3" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
-    <configuration name="Ex3" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="5 abcd" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Ex3" TARGET_NAME="Ex3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex3" RUN_TARGET_NAME="Ex3">
+    <configuration name="Ex3" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="5 abcd" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Ex3Int" TARGET_NAME="Ex3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex3Int" RUN_TARGET_NAME="Ex3">
       <envs />
     </configuration>
-    <list size="2">
+    <configuration name="Ex3Int" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="5 3" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Ex3Int" TARGET_NAME="Ex3Int" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex3Int" RUN_TARGET_NAME="Ex3Int">
+      <envs />
+    </configuration>
+    <configuration name="Ex3Str" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="5 A" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Ex3Int" TARGET_NAME="Ex3Str" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex3Int" RUN_TARGET_NAME="Ex3Str">
+      <envs />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.Ex3" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Ex3Int" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Ex3Str" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -262,12 +236,12 @@
       <updated>1512046948943</updated>
       <workItem from="1512046952166" duration="719000" />
       <workItem from="1512238029616" duration="116000" />
-      <workItem from="1512238499063" duration="33185000" />
+      <workItem from="1512238499063" duration="39453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34020000" />
+    <option name="totallyTimeSpent" value="40288000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -289,7 +263,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.50185674" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34225196" sideWeight="0.49814323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -317,13 +291,8 @@
           <line>9</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/GenericHashTable.c</url>
-          <line>266</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -420,24 +389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyIntFunctions.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyStringFunctions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-325">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/cygwin64/usr/include/_ansi.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -454,89 +405,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyIntFunctions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Key.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GenericHashTable.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="27" />
           <folding>
-            <element signature="e#58#78#0" expanded="true" />
+            <element signature="e#58#78#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state relative-caret-position="550">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyIntFunctions.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyStringFunctions.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-183">
-          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+        <state relative-caret-position="525">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Key.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyStringFunctions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyIntFunctions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HashStrSearch.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="64" column="4" lean-forward="true" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+        <state relative-caret-position="138">
+          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashIntSearch.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GenericHashTable.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="303" column="34" lean-forward="true" selection-start-line="303" selection-start-column="34" selection-end-line="303" selection-end-column="34" />
+        <state relative-caret-position="289">
+          <caret line="68" column="17" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="17" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#2275#2632#0" expanded="false" />
-            <element signature="e#3927#4062#0" expanded="false" />
-            <element signature="e#3927#4965#0" expanded="false" />
-            <element signature="e#5975#6138#0" expanded="false" />
-            <element signature="e#6512#6675#0" expanded="false" />
-            <element signature="e#7050#7132#0" expanded="false" />
-            <element signature="e#7697#7841#0" expanded="false" />
+            <element signature="e#2365#2722#0" expanded="false" />
+            <element signature="e#4021#4156#0" expanded="false" />
+            <element signature="e#6027#6190#0" expanded="false" />
+            <element signature="e#6027#6601#0" expanded="false" />
+            <element signature="e#6604#6767#0" expanded="false" />
+            <element signature="e#6604#7179#0" expanded="false" />
+            <element signature="e#7182#7264#0" expanded="false" />
+            <element signature="e#7182#7863#0" expanded="false" />
+            <element signature="e#7866#8010#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HashIntSearch.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

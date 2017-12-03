@@ -48,5 +48,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Ex3.dir/DependInfo.cmake"
+  "CMakeFiles/Ex3Int.dir/DependInfo.cmake"
+  "CMakeFiles/Ex3Str.dir/DependInfo.cmake"
   )
