@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libEx3.a  CMakeFiles/Ex3.dir/GenericHashTable.c.o
+/usr/bin/ranlib.exe libEx3.a
