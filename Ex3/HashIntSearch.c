@@ -3,8 +3,8 @@
 #include "GenericHashTable.h"
 #include "MyIntFunctions.h"
 
-#define MINIMAL_VAL 0
-#define MAXIMAL_VAL 10
+#define MINIMAL_VAL -15
+#define MAXIMAL_VAL 15
 #define DATA_SIZE (MAXIMAL_VAL - MINIMAL_VAL +1)
 /**
 * main
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     }
 
 
-    size_t tableSize =0;
+    size_t tableSize = 0;
     int val;
     sscanf(argv[1], "%d", (unsigned int *)(&tableSize));
     sscanf(argv[2], "%d", &val);

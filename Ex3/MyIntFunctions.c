@@ -33,9 +33,12 @@ void freeInt( void* i)
  */
 int intFcn (const void* key, size_t tableSize)
 {
+    // get key to pos key & if key>0 make him positive
     int posKey = *(int*)key;
 	while(posKey < 0) { posKey += tableSize; };
-	return (posKey % tableSize);
+
+    // return the index of the intFcn
+	return (int)(posKey % tableSize);
 }
 
 /**

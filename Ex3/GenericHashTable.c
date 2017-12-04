@@ -5,13 +5,19 @@
 
 
 #define CHECK_IF_NULL(pointer, error) do{ if (pointer == NULL) \
-    { fprintf(stderr, "Error: NULL pointer input\n"); return error; } } while(0)
+    { reportError(GENERAL_ERROR); return error; } } while(0)
 
 #define CHECK_ALLOCATION(pointer, error) do{ if (pointer == NULL) \
     { reportError(MEM_OUT); return error; } } while(0)
 
 #define EMPTY 0
 #define NON_EMPTY 1
+#define INITIALIZED_VALUE 1
+#define RETURN_0_IF_NULL 0
+#define EQUAL 0
+#define NOT_EQUAL 1
+#define SUCCESS 1
+
 
 typedef void *DataP;
 typedef struct Table *TableP;
@@ -24,9 +30,12 @@ static ObjectP *mallocObjectArr(size_t size);
 
 typedef struct Table
 {
+    // element that discribe the size
     size_t origSize;
     size_t size;
     int d;
+
+    // pointer to array of objectP
     ObjectP* object;
 
     // pointer to functions
@@ -41,9 +50,9 @@ typedef struct Table
 
 typedef struct Object
 {
+    // holds the key and the data
     DataP data;
     DataP key;
-
 } Object;
 
 
@@ -53,7 +62,6 @@ typedef struct Object
  * If run out of memory, free all the memory that was already allocated by the function, 
  * report error MEM_OUT to the standard error and return NULL.
  */
-
 TableP createTable(size_t tableSize, CloneKeyFcn cloneKey, FreeKeyFcn freeKey, HashFcn hfun, PrintKeyFcn printKeyFun,
                    PrintDataFcn printDataFun, ComparisonFcn fcomp)
 {
@@ -82,7 +90,7 @@ TableP createTable(size_t tableSize, CloneKeyFcn cloneKey, FreeKeyFcn freeKey, H
     // initialized Table
     table->origSize = tableSize;
     table->size = tableSize;
-    table->d = 1;
+    table->d = INITIALIZED_VALUE;
     table->cloneKey = cloneKey;
     table->freeKey = freeKey;
     table->hfun = hfun;
@@ -104,46 +112,39 @@ TableP createTable(size_t tableSize, CloneKeyFcn cloneKey, FreeKeyFcn freeKey, H
  */
 int insert(const TableP table, const void *key, DataP object)
 {
-    // checks for null pointer execption
-    CHECK_IF_NULL(table, 0);
-    CHECK_IF_NULL(object, 0);
-    CHECK_IF_NULL(key, 0);
+    // checks for null pointer exception
+    CHECK_IF_NULL(table, RETURN_0_IF_NULL);
+    CHECK_IF_NULL(object, RETURN_0_IF_NULL);
+    CHECK_IF_NULL(key, RETURN_0_IF_NULL);
 
     // get the index to insert to: i = d*H(k,n)
     int i = table->d * table->hfun(key, table->origSize);
 
-    // search avialable place in ragne [i,i+d]
+    // search available place in range [i,i+d]
     for(int j = i; j < i + table->d; ++j)
     {
         // case 1: occupied
-        if (table->object[j]->data != NULL)
+        if (table->object[j]->data != NULL
+            && table->fcomp(table->object[j]->key, key) == EQUAL)
         {
             // same key - replace
-            if (table->fcomp(table->object[j]->key, key) == 0)
-            {
-                table->object[j]->data = object;
-                return 1; // succesfull insert - true
-            }
-            else // continue to the next cell
-            {
-                continue;
-            }
+            table->object[j]->data = object;
+            return SUCCESS; // successful insert - true
         }
-        else
-        {
-            // insert object to the index place
+        else if (table->object[j]->data == NULL)
+        { // case 2: available
             table->object[j]->data = object;
             table->object[j]->key = table->cloneKey(key);
-            return 1; // successful insert - true
+            return SUCCESS; // successful insert - true
         }
     }
-
-    // cell not found - double the hash table
+    // all occupied - double the hash table
     expandTable(table);
-    // insert object to i+1
+
+    // done expand and insert object to i+1
     table->object[i*2 + 1]->data = object;
     table->object[i*2 + 1]->key = table->cloneKey(key);
-    return 1; // successful insert - true
+    return SUCCESS; // successful insert - true
 }
 
 
@@ -163,25 +164,20 @@ DataP removeData(TableP table, const void *key)
     // search in range [i,i+d]
     for(int j = i; j < i + table->d; ++j)
     {
-        if (table->object[j]->data != NULL)
+        if (table->object[j]->data != NULL
+            && table->fcomp(table->object[j]->key, key) == EQUAL)
         {
-            // case 1: compare i'th cell with key
-            if (table->fcomp(table->object[j]->key, key) == 0)
-            {
-                // get the ejectedData and make the cell[j] available
-                DataP ejectedData = table->object[j]->data;
-                table->object[j]->data = NULL;
-                table->freeKey(table->object[j]->key);
-                table->object[j]->key = NULL;
-                return ejectedData;
-            }
+            // get the ejectedData and make the cell[j] available
+            DataP ejectedData = table->object[j]->data;
+            table->freeKey(table->object[j]->key);
+            table->object[j]->data = NULL;
+            table->object[j]->key = NULL;
+            return ejectedData;
         }
     }
     // not found
     return NULL;
 }
-
-
 
 /**
  * @brief Search the table and look for an object with the given key.
@@ -205,7 +201,7 @@ DataP findData(const TableP table, const void *key, int *arrCell)
     {
         // case 1: compare i'th cell with key
         if (table->object[j]->data != NULL
-            && table->fcomp(table->object[j]->key, key) == 0)
+            && table->fcomp(table->object[j]->key, key) == EQUAL)
         {
             *arrCell = j;
             return table->object[j]->data;
@@ -321,7 +317,6 @@ void freeTable(TableP table)
     table = NULL;
 }
 
-
 static void expandTable(TableP table)
 {
     // create new object array with double the size
@@ -346,7 +341,6 @@ static void expandTable(TableP table)
     table->d *= 2;
     table->size *= 2;
 }
-
 
 static ObjectP* mallocObjectArr(size_t size)
 {

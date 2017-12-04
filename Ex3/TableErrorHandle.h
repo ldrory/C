@@ -10,7 +10,6 @@ typedef enum
 } TableErrors;
 
 
-
 /**
  * @brief Receive an error and report it
  * Do all the errors report through this function.

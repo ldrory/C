@@ -2,12 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define EQUAL 0
+#define NOT_EQUAL 1
+
 
 /**
  * @brief clone a string
  */
 void* cloneStr(const void*  s)
 {
+    // let l be the string
 	char* l = (char*) s;
 
 	// allocate memory for the string cloned
@@ -26,7 +30,6 @@ void freeStr(void* s)
     s = NULL;
 }
 
-
 /**
  * @brief hash value of key for HashTable with size tableSize
  *  assuming key pointer to string
@@ -38,11 +41,12 @@ int strFcn (const void*  s, size_t tableSize)
 	// initialiez ascii sum to be 0
 	int asciiSum = 0;
 
+    // hash func is to sum all the ascii char
 	for (unsigned int i = 0; i < strlen((char*)s); ++i)
 	{
 		asciiSum += *((char*)s + i);
 	}
-	return asciiSum % tableSize;
+	return (int)(asciiSum % tableSize);
 }
 
 /**
@@ -52,6 +56,7 @@ int strFcn (const void*  s, size_t tableSize)
  */
 void strPrint (const void*  s)
 {
+    // print string
 	printf("%s", ((char*)s));
 }
 
@@ -63,5 +68,9 @@ void strPrint (const void*  s)
  */
 int strCompare (const void* comp1, const void* comp2)
 {
+    if (comp1 == NULL || comp2 == NULL)
+    {
+        return NOT_EQUAL;
+    }
 	return strcmp((char*) comp1, (char*) comp2);
 }

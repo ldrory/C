@@ -1,32 +1,47 @@
 CC = gcc
 CFLAGS = -g -Wextra -Wall -Wvla -std=c99
-VALFLAGS = --leak-check=full --undef-value-errors=yes --track-origins=yes --show-reachable=yes --show-mismatched-frees=yes
+CPPFLAGS = -DNDEBUG
+VALFLAGS = --leak-check=full --undef-value-errors=yes --track-origins=yes \
+ 			--show-reachable=yes --show-mismatched-frees=yes
 
-all: progInt progStr
+.DEFAULT_GOAL = default
 
-progInt: HashIntSearch.o GenericHashTable.o MyIntFunctions.o TableErrorHandle.o
-	$(CC) -o $@ $^
+SRCS = $(wildcard *.c)
+OBJS = $(SRCS:.c=.o)
+DEPS = $(SRCS:.c=.d)
+include $(DEPS)
 
-progStr: HashStrSearch.o GenericHashTable.o MyStringFunctions.o TableErrorHandle.o
-	$(CC) -o $@ $^
+all: HashIntSearch HashStrSearch
 
-HashIntSearch.o: HashIntSearch.c GenericHashTable.h MyIntFunctions.h
-HashStrSearch.o: HashStrSearch.c GenericHashTable.h MyStringFunctions.h
-GenericHashTable.o: GenericHashTable.c GenericHashTable.h TableErrorHandle.h
-MyIntFunctions.o: MyIntFunctions.c Key.h
-TableErrorHandle.o: TableErrorHandle.c TableErrorHandle.h
+default: HashIntSearch
+	./$< 1 0
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $<
+HashIntSearch: HashIntSearch.o MyIntFunctions.o libgenericHashTable.a
+HashStrSearch: HashStrSearch.o MyStringFunctions.o libgenericHashTable.a
+%: %.o
+	$(CC) -o $@ -L./ $^
+
+GenericHashTable: libgenericHashTable.a
+libgenericHashTable.a: GenericHashTable.o TableErrorHandle.o
+	ar -rcs $@ $^
+
+%.d: %.c
+	$(CC) -MM $< > $@;\
+	sed -i 's/\($*\.o\):/\1 $@:/g' $@
+
+$(OBJS): %.o: %.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $<
 
 val: valdbgInt valdbgStr
 valdbg%: prog%
 	valgrind $(VALFLAGS) --log-file='$@' ./$< 5 3 > $*.out
 
 tar: ex3.tar
-ex3.tar: HashIntSearch.c HashStrSearch.c GenericHashTable.c
+ex3.tar: GenericHashTable.c MyIntFunctions.c MyStringFunctions.c \
+	MyIntFunctions.h MyStringFunctions.h Key.h makefile
+	tar -cvf $@ $^
 
 clean:
-	rm -rf *.o *.a ~* prog* *.out valdbg*
+	rm -rf *.o *.a ~* prog* *.out valdbg* *.d
 
-.PHONY: clean all tar val
+.PHONY: clean all tar val default GenericHashTable

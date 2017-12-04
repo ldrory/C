@@ -61,8 +61,8 @@ int main(int argc, char *argv[])
     
     findData(table, val, &arrCell);
     printf("%s\t%d\t\n", val, arrCell);
-    
-    
+
+
     // (6) free the table
     freeTable(table);
 
